@@ -60,7 +60,7 @@ const Header = () => {
   });
 
   return (
-    <Box className={classes.headerWrapper} sx={{ zIndex: 2 }}>
+    <Box className={classes.headerWrapper} sx={{ zIndex: 3 }}>
       <Box className={classes.textWrapper}>
         <Box className={classes.drawerBox}>
           <IconButton

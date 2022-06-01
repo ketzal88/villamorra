@@ -5,6 +5,8 @@ const ArrowButton = ({ buttonAction }) => {
   const classes = useStyles();
   return (
     <img
+      role="button"
+      style={{ cursor: "pointer" }}
       src={flecha}
       alt="Flecha"
       className={classes.arrowButton}

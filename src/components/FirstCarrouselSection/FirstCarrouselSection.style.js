@@ -6,7 +6,6 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       maxWidth: "1920px",
       overflow: "hidden",
       flexWrap: "wrap",
-      paddingBottom: "52px !important",
       [theme.breakpoints.up("md")]: {
         height: "768px",
         flexWrap: "nowrap",
@@ -42,10 +41,13 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       fontWeight: "bold !important",
     },
     textBox: {
+      position: "relative",
       color: "white",
       width: "100%",
       paddingInline: "38px",
       paddingTop: "43px",
+      paddingBottom: "52px !important",
+      minHeight: "calc(533px - 95px)",
       [theme.breakpoints.up("md")]: {
         paddingInline: "112px",
         paddingTop: "136px",
@@ -56,19 +58,7 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
         paddingTop: "136px",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingLeft: "80px",
-        paddingRight: "111px",
-        paddingTop: "236px",
-      },
-    },
-    titleSection: {
-      fontSize: "34px !important",
-      fontWeight: "700 !important",
-      [theme.breakpoints.up("md")]: {
-        fontSize: "48px !important",
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: "60px !important",
+        padding: "163px 111px 0px 80px",
       },
     },
     subTitleSection: {
@@ -76,11 +66,11 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       fontSize: "24px !important",
       paddingTop: "40px !important",
       [theme.breakpoints.up("md")]: {
-        paddingTop: "60px",
+        paddingTop: "70px !important",
         fontSize: "34px !important",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingTop: "80px",
+        paddingTop: "155px !important",
         fontSize: "46px !important",
       },
     },
@@ -106,21 +96,25 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     arrowContainer: {
+      position: "absolute",
       marginTop: "56px",
-      marginLeft: "auto",
+      bottom: 0,
       width: "72px",
       height: "72px",
+      marginBottom: "52px",
+      marginRight: "38px",
+      right: 0,
+      animation: "none !important",
       [theme.breakpoints.up("md")]: {
-        marginLeft: "0px",
-        marginTop: "71px",
+        right: "auto",
+        marginBottom: "136px",
       },
       [theme.breakpoints.up("lg")]: {
-        marginTop: "68px",
         width: "74px",
         height: "74px",
       },
       [theme.breakpoints.up("xl")]: {
-        marginTop: "76px",
+        marginBottom: "222px",
         width: "124px",
         height: "124px",
       },
