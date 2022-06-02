@@ -24,7 +24,7 @@ const AmenitiesSection = () => {
         className={classes.titleWrapper}
       >
         <Typography variant="h2" className={classes.titleSection}>
-          Work & Live
+          Amenities
         </Typography>
       </Stack>
       <Box className={classes.wrapperSection}>
@@ -49,7 +49,7 @@ const AmenitiesSection = () => {
                 <Box className={classes.iconContainer}>
                   <ArrowButton
                     buttonAction={() => {
-                      if (selectedElement === 4) return setSelectedElement(0);
+                      if (selectedElement === 6) return setSelectedElement(0);
                       setSelectedElement(selectedElement + 1);
                     }}
                   />
