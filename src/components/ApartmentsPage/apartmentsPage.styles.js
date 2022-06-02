@@ -16,8 +16,8 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         margin: "0 auto !important",
         height: "50px !important",
-        width: "250px !important"
-      }
+        width: "250px !important",
+      },
     },
     agendaText: {
       color: "white",
@@ -26,11 +26,11 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         fontSize: "21px !important",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "17px !important"
+        fontSize: "17px !important",
       },
       [theme.breakpoints.down("md")]: {
-        fontSize: "12px !important"
-      }
+        fontSize: "12px !important",
+      },
     },
     apartmentCard: {
       width: "100%",
@@ -40,8 +40,8 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       margin: "0 0 43px 0 !important",
       textTransform: "none",
       [theme.breakpoints.down("md")]: {
-        flexDirection: "column !important"
-      }
+        flexDirection: "column !important",
+      },
     },
     apartmentsContainer: {
       width: "100%",
@@ -49,16 +49,16 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     apartmentImageContainer: {
       width: "33.33%",
       [theme.breakpoints.down("md")]: {
-        width: "100%"
-      }
+        width: "100%",
+      },
     },
     apartmentImage: {
       height: "100%",
       width: "100%",
       [theme.breakpoints.down("md")]: {
         height: "33.33% !important",
-        width: "100% !important"
-      }
+        width: "100% !important",
+      },
     },
     apartmentName: {
       fontSize: "50px !important",
@@ -66,14 +66,14 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       color: "white",
       [theme.breakpoints.down("md")]: {
         fontSize: "46px !important",
-      }
+      },
     },
     apartmentSize: {
       fontSize: "28px !important",
       color: "white !important",
       [theme.breakpoints.down("md")]: {
         fontSize: "20px !important",
-      }
+      },
     },
     apartamentosTitle: {
       marginTop: "72px !important",
@@ -82,21 +82,21 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         fontSize: "65px !important",
       },
       [theme.breakpoints.down("md")]: {
-        fontSize: "28px !important"
-      }
+        fontSize: "28px !important",
+      },
     },
     buttonsContainer: {
       alignItems: "flex-end !important",
       width: "30% !important",
       [theme.breakpoints.down("md")]: {
-        width: "100% !important"
-      }
+        width: "100% !important",
+      },
     },
     buttons: {
       marginBottom: "30px !important",
       [theme.breakpoints.down("md")]: {
-        marginBottom: "0 !important"
-      }
+        marginBottom: "0 !important",
+      },
     },
     cardBody: {
       justifyContent: "space-between",
@@ -104,24 +104,25 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         width: "41.66% !important",
       },
       [theme.breakpoints.up("md")]: {
-        width: "35% !important"
+        width: "35% !important",
       },
       [theme.breakpoints.down("md")]: {
-        width: "100% !important"
-      }
+        width: "100% !important",
+      },
     },
     codAreaField: {
-      width: '30% !important', 
-      marginRight: '39px !important',
+      width: "30% !important",
+      marginRight: "39px !important",
       [theme.breakpoints.down("sm")]: {
         marginRight: "20px !important",
         width: "50% !important",
-      }
+      },
     },
     descargarButton: {
       height: "83px !important",
       borderRadius: "46px !important",
       borderColor: "#F1804F !important",
+
       py: "28px",
       [theme.breakpoints.up("xl")]: {
         width: "356px !important",
@@ -132,8 +133,8 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         margin: "40px auto 20px auto !important",
         height: "50px !important",
-        width: "250px !important"
-      }
+        width: "250px !important",
+      },
     },
     descargarText: {
       color: "white",
@@ -143,30 +144,30 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         fontSize: "21px !important",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "17px !important"
+        fontSize: "17px !important",
       },
       [theme.breakpoints.down("md")]: {
-        fontSize: "12px !important"
-      }
+        fontSize: "12px !important",
+      },
     },
     dormitoriosText: {
       fontSize: "28px !important",
       color: "white",
       [theme.breakpoints.down("md")]: {
         fontSize: "17px !important",
-        fontWeight: "700 !important"
-      }
+        fontWeight: "700 !important",
+      },
     },
     filterBox: {
-      display: "flex"
+      display: "flex",
     },
     filtersContainer: {
       justifyContent: "flex-start",
       marginBottom: "80px !important",
       marginTop: "20px !important",
       [theme.breakpoints.down("md")]: {
-        justifyContent: "space-between !important"
-      }
+        justifyContent: "space-between !important",
+      },
     },
     modalApartmentImage: {
       width: "33.33% !important",
@@ -174,75 +175,75 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         display: "block",
       },
       [theme.breakpoints.down("sm")]: {
-        display: "none !important"
-      }
+        display: "none !important",
+      },
     },
     modalApartmentName: {
-      fontSize: '78px !important', 
-      color: 'white !important', 
-      fontWeight: '900 !important', 
-      lineHeight: '86px !important', 
-      fontStyle: 'normal !important',
+      fontSize: "78px !important",
+      color: "white !important",
+      fontWeight: "900 !important",
+      lineHeight: "86px !important",
+      fontStyle: "normal !important",
       [theme.breakpoints.down("sm")]: {
-        "text-align": "center !important"
-      }
+        "text-align": "center !important",
+      },
     },
     modalApartmentImageMobile: {
       width: "100% !important",
       [theme.breakpoints.up("sm")]: {
-        display: "none !important"
+        display: "none !important",
       },
       [theme.breakpoints.down("sm")]: {
-        display: "block"
-      }
+        display: "block",
+      },
     },
     modalBody: {
-      width: "100% !important", 
-      p: "0 important!", 
+      width: "100% !important",
+      p: "0 important!",
       marginBottom: "25px !important",
       [theme.breakpoints.down("sm")]: {
         alignItems: "center",
-        flexDirection: "column !important"
-      }
+        flexDirection: "column !important",
+      },
     },
     modalFields: {
-      width: "33.33% !important", 
-      paddingLeft: "30px !important", 
+      width: "33.33% !important",
+      paddingLeft: "30px !important",
       paddingRight: "40px !important",
       [theme.breakpoints.down("sm")]: {
         width: "100% !important",
         paddingRight: "0 !important",
-        paddingLeft: "0 !important"
-      }
+        paddingLeft: "0 !important",
+      },
     },
     modalPisoText: {
-      fontSize: "28px !important", 
-      color: "white !important", 
+      fontSize: "28px !important",
+      color: "white !important",
       fontWeight: "600 !important",
       [theme.breakpoints.down("sm")]: {
-        "text-align": "center"
-      }
+        "text-align": "center",
+      },
     },
     modalSizeText: {
-      fontSize: "32px !important", 
-      color: "white !important", 
-      lineHeight: "43px !important", 
-      fontWeight: "600 !important"
+      fontSize: "32px !important",
+      color: "white !important",
+      lineHeight: "43px !important",
+      fontWeight: "600 !important",
     },
     modalTermsAndConditions: {
       color: "white !important",
-      paddingLeft: "12px !important", 
+      paddingLeft: "12px !important",
       [theme.breakpoints.down("sm")]: {
-        display: "none !important"
-      }
+        display: "none !important",
+      },
     },
     modalTermsAndConditionsMobile: {
       color: "white !important",
       paddingLeft: "12px !important",
       marginBottom: "10px !important",
       [theme.breakpoints.up("sm")]: {
-        display: "none !important"
-      }
+        display: "none !important",
+      },
     },
     modalWrapper: {
       backgroundColor: "#132127 !important",
@@ -258,27 +259,27 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       color: "white",
       [theme.breakpoints.down("md")]: {
         fontSize: "17px !important",
-        fontWeight: "700 !important"
-      }
+        fontWeight: "700 !important",
+      },
     },
     pisosFilter: {
-      width: "25% !important", 
+      width: "25% !important",
       marginRight: "176px !important",
       [theme.breakpoints.down("md")]: {
         marginRight: "0 !important",
-        width: "45% !important"
-      }
+        width: "45% !important",
+      },
     },
     telefonoField: {
       [theme.breakpoints.down("sm")]: {
-        width: "50% !important"
-      }
+        width: "50% !important",
+      },
     },
     tiposFilter: {
-      width: "25% !important", 
+      width: "25% !important",
       [theme.breakpoints.down("md")]: {
-        width: "45% !important"
-      }
+        width: "45% !important",
+      },
     },
     wrapper: {
       alignItems: "center",
@@ -290,8 +291,8 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         maxWidth: "1920px",
       },
       [theme.breakpoints.down("md")]: {
-        padding: "0 30px"
-      }
+        padding: "0 30px",
+      },
     },
   };
 });

@@ -155,25 +155,32 @@ export default function ApartmentsPage() {
                   IconComponent: (props) => (
                     <KeyboardArrowDownIcon
                       {...props}
-                      sx={{ color: "#F1804F !important" }}
+                      sx={{
+                        color: (theme) =>
+                          `${theme.palette.primary.vmGreen} !important`,
+                      }}
                     />
                   ),
                 }}
                 sx={{
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:after": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -235,25 +242,32 @@ export default function ApartmentsPage() {
                   IconComponent: (props) => (
                     <KeyboardArrowDownIcon
                       {...props}
-                      sx={{ color: "#F1804F !important" }}
+                      sx={{
+                        color: (theme) =>
+                          `${theme.palette.primary.vmGreen} !important`,
+                      }}
                     />
                   ),
                 }}
                 sx={{
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:after": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -328,7 +342,8 @@ export default function ApartmentsPage() {
                   </Grid>
                   <Divider
                     sx={{
-                      border: "4px solid #F1804F",
+                      border: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                       width: "50%",
                       marginBottom: "31px",
                       marginTop: "20px",

@@ -33,7 +33,6 @@ const Header = ({ path }) => {
     pathname === "/01sync-asuncion" ||
     pathname === "/" ||
     pathname === "/01sync-asuncion/";
-  console.log("file: Header.jsx ~ line 33 ~ Header ~ isHomePage", isHomePage);
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
   const [reference, setReference] = useState("");
 
