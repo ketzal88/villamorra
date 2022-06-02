@@ -5,7 +5,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     agendaButton: {
       height: "83px !important",
       borderRadius: "46px !important",
-      backgroundColor: "#F1804F !important",
+      backgroundColor: `${theme.palette.primary.vmGreen} !important`,
       py: "28px",
       [theme.breakpoints.up("xl")]: {
         width: "356px !important",
@@ -121,7 +121,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     descargarButton: {
       height: "83px !important",
       borderRadius: "46px !important",
-      borderColor: "#F1804F !important",
+      borderColor: `${theme.palette.primary.vmGreen} !important`,
 
       py: "28px",
       [theme.breakpoints.up("xl")]: {
