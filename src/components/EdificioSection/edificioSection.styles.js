@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import edificio from "../../assets/images/edificio.png";
+import edificio from "../../assets/images/edificio.jpg";
 
 export const useEdificioStyles = makeStyles((theme) => {
   return {

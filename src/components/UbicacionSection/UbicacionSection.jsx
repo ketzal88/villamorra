@@ -14,6 +14,11 @@ const UbicacionSection = () => {
         <Typography className={classes.titleSection} variant="h2">
           Ubicación
         </Typography>
+        {/* <Typography>
+          De aspecto moderno e innovador, se destaca por ser un proyecto
+          conectado, con la tecnología al servicio de la comodidad y el cuidado
+          del medio ambiente como prioridad.
+        </Typography> */}
         <Stack direction="row" justifyContent="center" alignItems="center">
           <img src={mapa} alt="alta" />
         </Stack>
