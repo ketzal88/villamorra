@@ -18,7 +18,6 @@ import {
   pisoText,
 } from "../../utils/apartmentsUtils";
 import { useApartmentsPageStyles } from "./apartmentsPage.styles";
-import { useScrollTo } from "../../customHooks/useScrollTo";
 
 const PISOS_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

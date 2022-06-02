@@ -2,14 +2,14 @@ import { Box, Stack, Typography } from "@mui/material";
 import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import cristian from "../../assets/images/Cristian Erosa.png";
-import mariana from "../../assets/images/Mariana Martinez.png";
+import vendedora from "../../assets/images/vendedora.jpg";
 import FormEntrevista from "./FormEntrevista";
 
 const images = [
   {
-    img: mariana,
-    sellerName: "Mariana Martinez",
-    phoneNumber: "+598 97 446 111",
+    img: vendedora,
+    sellerName: "Caterine Stenger",
+    phoneNumber: "+595 99 2249501",
   },
   {
     img: cristian,
@@ -18,7 +18,7 @@ const images = [
   },
 ];
 
-const sellerChoosed = 1;
+const sellerChoosed = 0;
 // Math.round(Math.random());
 
 const EntrevistaSection = () => {

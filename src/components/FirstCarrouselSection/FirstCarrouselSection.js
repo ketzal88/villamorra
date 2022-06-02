@@ -140,7 +140,7 @@ const FirstCarrouselSection = () => {
                 sx={{
                   backgroundColor:
                     selectedType === accessKey
-                      ? "#BCDAFA !important"
+                      ? "rgba(188, 218, 250, 0.3) !important"
                       : "rgba(0, 0, 0, 0.08) !important",
                   color: "white",
                   borderRadius: "33px !important",
@@ -148,6 +148,7 @@ const FirstCarrouselSection = () => {
                   fontSize: { xs: "18px", lg: "25px" },
                   "&.MuiChip-root": () => ({
                     "& .MuiChip-label": {
+                      opacity: "1 !important",
                       margin: "12px !important",
                       fontFamily: "Montserrat",
                     },

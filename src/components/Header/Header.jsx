@@ -11,11 +11,11 @@ import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useScrollTo } from "../../customHooks/useScrollTo";
 
-const Links = ({ classes, setReference }) =>
+const Links = ({ classes, setReference, path }) =>
   navLinks.map(({ label, link, reference }) => (
     <Link
       key={label}
-      to={link}
+      to={path === link ? `${path}` : `${path}${link}`}
       onClick={(e) => {
         !link && e.preventDefault();
         setReference(reference ?? "");
@@ -26,7 +26,7 @@ const Links = ({ classes, setReference }) =>
     </Link>
   ));
 
-const Header = () => {
+const Header = ({ path }) => {
   const [drawerStatus, setDrawerStatus] = useState(false);
   const { pathname } = useLocation();
   const isHomePage =
@@ -82,16 +82,22 @@ const Header = () => {
               },
             }}
           >
-            {<Links classes={classes} setReference={setReference} />}
+            {
+              <Links
+                classes={classes}
+                setReference={setReference}
+                path={path}
+              />
+            }
           </Drawer>
         </Box>
         <img src={logoVM} alt="Logo Sync" className={classes.logo} />
         <Box className={classes.linksContainer}>
-          {<Links classes={classes} setReference={setReference} />}
+          {<Links classes={classes} setReference={setReference} path={path} />}
         </Box>
         <Box sx={{ display: "flex" }}>
           <Link
-            to="/apartaments"
+            to={`${path}apartaments`}
             className={`${classes.navLink} ${classes.LinkVitrium}`}
           >
             VITRIUM CAPITAL

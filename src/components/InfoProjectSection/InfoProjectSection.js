@@ -23,14 +23,13 @@ const InfoProjectSection = () => {
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>
-            Más conectados <br /> que nunca
+            Sustentable, Flexible <br /> y Moderno
           </Typography>
           <Typography className={classes.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
-            malesuada pellentesque elit eget gravida cum sociis natoque
-            penatibus. Pharetra massa massa ultricies mi quis hendrerit dolor
-            magna.
+            Un desarrollo real y actual. Con el foco en el hoy, ofrece
+            soluciones tecnológicas para resolver el encuentro entre tu vida
+            familiar, social y laboral. Inspirado en la construcción de un
+            futuro conectado y saludable
           </Typography>
         </Box>
       </Stack>

@@ -1,10 +1,25 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLadingSectionStyles } from "./landingSection.styles";
 
-const LandingSection = () => {
-  const navigate = useNavigate();
+const LandingSection = ({ path }) => {
   const classes = useLadingSectionStyles();
+  const navigate = useNavigate();
+  const [recorridoSection, setrecorridoSection] = useState("");
+
+  useEffect(() => {
+    if (recorridoSection) {
+      const element = document.querySelector(recorridoSection);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [recorridoSection]);
+
   return (
     <Box
       sx={{
@@ -16,20 +31,23 @@ const LandingSection = () => {
       <Grid container className={classes.wrapper} id="landingSection">
         <Grid item className={classes.textWrapper}>
           <Typography className={classes.location} variant="h3">
-            Montevideo, Uruguay
+            Villa Morra, Paraguay
           </Typography>
           <Typography className={classes.mainTitle} variant="h1">
-            <span>Diseñados para</span>
-            <span>una nueva era</span>
+            <span>Cada espacio de tu vida,</span>
+            <span>conectado</span>
           </Typography>
           <Grid item className={classes.buttonWrapper}>
             <button
               className={classes.apartamentsButton}
-              onClick={() => navigate("/apartaments")}
+              onClick={() => navigate(`${path}apartments`)}
             >
               VER APARTAMENTOS
             </button>
-            <button className={classes.recorridoButton}>
+            <button
+              className={classes.recorridoButton}
+              onClick={() => setrecorridoSection("#recorridoSection")}
+            >
               RECORRIDO VIRTUAL
             </button>
           </Grid>

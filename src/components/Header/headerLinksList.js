@@ -1,20 +1,20 @@
 export const navLinks = [
   {
     label: "INICIO",
-    link: "/01sync-asuncion",
+    link: "/",
   },
   {
     label: "EDIFICIO",
-    link: "/01sync-asuncion/",
+    link: "/",
     reference: "#edificioSection",
   },
   {
     label: "APARTAMENTOS",
-    link: "/01sync-asuncion/apartments",
+    link: "apartments",
   },
   {
     label: "WORK & LIVE",
-    link: "/01sync-asuncion/",
+    link: "/",
     reference: "#amenitiesSection",
   },
   {

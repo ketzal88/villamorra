@@ -207,7 +207,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     objectFit: "contain",
     height: "716px",
     marginTop: "90px",
-    transform: "translateX(-20%) scale(.8)",
+    transform: "translateX(-20%)",
     [theme.breakpoints.up("md")]: {
       height: "506px",
       width: "271px",
@@ -217,12 +217,12 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       height: "676px",
       width: "457px",
       marginTop: "0px",
-      transform: "translateX(-13%) translateY(5%) scale(1.2)",
+      transform: "translateX(-13%) translateY(5%)",
     },
     [theme.breakpoints.up("xl")]: {
       height: "676px",
       width: "457px",
-      transform: "translateX(-10%) translateY(11.3%) scale(1.2)",
+      transform: "translateX(-10%) translateY(11.3%)",
     },
   },
   radioButton: {
