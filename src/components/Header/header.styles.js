@@ -28,7 +28,6 @@ export const useHeaderStyles = makeStyles((theme) => {
         if (isOverLandingSection) return "transparent";
         else return theme.palette.primary.syncBlue;
       },
-      transition: "background-color 0.1s ease-in-out",
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",
         paddingTop: "0px",

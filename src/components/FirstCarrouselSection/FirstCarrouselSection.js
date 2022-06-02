@@ -11,6 +11,25 @@ import {
 import ArrowButton from "../ArrowButton/ArrowButton";
 import { elementsList } from "./elementsList";
 import { useFirstCarrouselSection } from "./FirstCarrouselSection.style";
+import domoticaDesk from "../../assets/images/Desktop/Tech/Tecnologia/1-tech.jpg";
+import domoticaMob from "../../assets/images/mobile/Tech/Tecnologia/1-tech.jpg";
+import controlDeAccesoDesk from "../../assets/images/Desktop/Tech/Tecnologia/2-tech.jpg";
+import controlDeAccesoMob from "../../assets/images/mobile/Tech/Tecnologia/2-tech.jpg";
+import sistemaAudioDesk from "../../assets/images/Desktop/Tech/Tecnologia/3-tech.jpg";
+import sistemaAudioMob from "../../assets/images/mobile/Tech/Tecnologia/3-tech.jpg";
+import sistemaCctvDesk from "../../assets/images/Desktop/Tech/Tecnologia/4-tech.jpg";
+import sistemaCctvMob from "../../assets/images/mobile/Tech/Tecnologia/4-tech.jpg";
+import sistemaRedesDesk from "../../assets/images/Desktop/Tech/Tecnologia/5-tech.jpg";
+import sistemaRedesMob from "../../assets/images/mobile/Tech/Tecnologia/5-tech.jpg";
+
+import edificioDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/1-sust.jpg";
+import edificioMob from "../../assets/images/mobile/Tech/Sustentabilidad/1-sust.jpg";
+import plantaDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/2-sust.jpg";
+import plantaMob from "../../assets/images/mobile/Tech/Sustentabilidad/2-sust.jpg";
+import jardinDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/3-sust.jpg";
+import jardinMob from "../../assets/images/mobile/Tech/Sustentabilidad/3-sust.jpg";
+import biciDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/4-sust.jpg";
+import biciMob from "../../assets/images/mobile/Tech/Sustentabilidad/4-sust.jpg";
 
 const imgStyles = {
   Tecnología: [
@@ -65,6 +84,58 @@ const textEffectExit = keyframes`
   }
 `;
 
+const carrouselImages = {
+  Tecnología: [
+    {
+      xs: domoticaMob,
+      lg: domoticaDesk,
+      xl: domoticaDesk,
+    },
+    {
+      xs: controlDeAccesoMob,
+      lg: controlDeAccesoDesk,
+      xl: controlDeAccesoDesk,
+    },
+    {
+      xs: sistemaAudioMob,
+      lg: sistemaAudioDesk,
+      xl: sistemaAudioDesk,
+    },
+    {
+      xs: sistemaCctvMob,
+      lg: sistemaCctvDesk,
+      xl: sistemaCctvDesk,
+    },
+    {
+      xs: sistemaRedesMob,
+      lg: sistemaRedesDesk,
+      xl: sistemaRedesDesk,
+    },
+  ],
+  Sustentabilidad: [
+    {
+      xs: edificioMob,
+      lg: edificioDesk,
+      xl: edificioDesk,
+    },
+    {
+      xs: plantaMob,
+      lg: plantaDesk,
+      xl: plantaDesk,
+    },
+    {
+      xs: jardinMob,
+      lg: jardinDesk,
+      xl: jardinDesk,
+    },
+    {
+      xs: biciMob,
+      lg: biciDesk,
+      xl: biciDesk,
+    },
+  ],
+};
+
 const FIRSTCARROUSELTYPE = Object.keys(elementsList)[0];
 
 const FirstCarrouselSection = () => {
@@ -78,10 +149,13 @@ const FirstCarrouselSection = () => {
   const {
     subTitle,
     text,
-    image: { xs, lg, xl },
+    // image: { xs, lg, xl },
   } = elementsList?.[selectedType]?.[selectedElement];
 
-  const changeTypeOfCarrousel = (type) => () => setSelectedType(type);
+  const changeTypeOfCarrousel = (type) => () => {
+    setSelectedElement(0);
+    setSelectedType(type);
+  };
   const hasToReset = selectedType === FIRSTCARROUSELTYPE ? 4 : 3;
 
   return (
@@ -113,7 +187,11 @@ const FirstCarrouselSection = () => {
           </Typography>
           <CardMedia
             component="img"
-            image={laptop && !desktop ? lg : desktop ? xl : xs}
+            image={
+              carrouselImages[selectedType][selectedElement][
+                laptop && !desktop ? "lg" : desktop ? "xl" : "xs"
+              ]
+            }
             alt={subTitle}
             className={classes.imageSection}
             sx={imgStyles[selectedType][selectedElement]}

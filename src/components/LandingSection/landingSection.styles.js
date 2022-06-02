@@ -12,18 +12,13 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       height: "930px",
-      [theme.breakpoints.down("sm")]: {
-        backgroundPosition: "36% 0px",
-        paddingLeft: "38px !important",
-      },
+      backgroundPosition: "36% 0px",
+      minHeight: "745px",
+      paddingTop: "296px",
+      paddingLeft: "38px !important",
       [theme.breakpoints.up("md")]: {
         backgroundImage: `url(${headerLapt})`,
         backgroundPosition: "center",
-      },
-      [theme.breakpoints.down("lg")]: {
-        minHeight: "745px",
-        paddingLeft: "98px",
-        paddingTop: "296px",
       },
       [theme.breakpoints.up("lg")]: {
         backgroundImage: `url(${headerDesk})`,
@@ -49,11 +44,14 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       },
     },
     mainTitle: () => ({
-      fontSize: "48px !important",
+      fontSize: "45px !important",
       maxWidth: "min-content",
       marginBottom: "162px !important",
       "& :nth-child(2)": {
         marginLeft: "10px",
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "48px !important",
       },
       [theme.breakpoints.up("md")]: {
         fontSize: "60px !important",
@@ -62,7 +60,6 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         "& :nth-child(2)": {
           marginLeft: "0px",
           "&:before": {
-            color: "blue !important",
             content: "'\\a'",
             whiteSpace: "pre",
           },

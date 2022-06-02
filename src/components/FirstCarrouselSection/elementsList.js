@@ -68,16 +68,16 @@ export const elementsList = {
       text: "Reduce el impacto de la huella de carbono y favorece la biodiversidad y la integridad del medio ambiente, sirviendo como barreara acústica, de polvo y hollín..",
       image: { xs: edificioMob, lg: edificioDesk, xl: edificioDesk },
     },
-    // {
-    //   subTitle: "Separación de residuos reciclables",
-    //   text: "Espacios exclusivos destinados y pensados para el reciclaje.",
-    //   image: { xs: "", lg: "", xl: "" },
-    // },
     {
-      subTitle: "Recolección de agua de lluvia",
-      text: "Sistema que reutiliza el agua recolectada para la limpieza de espacios comunes.",
+      subTitle: "Separación de residuos reciclables",
+      text: "Espacios exclusivos destinados y pensados para el reciclaje.",
       image: { xs: plantaMob, lg: plantaDesk, xl: plantaDesk },
     },
+    // {
+    //   subTitle: "Recolección de agua de lluvia",
+    //   text: "Sistema que reutiliza el agua recolectada para la limpieza de espacios comunes.",
+    //   image: { xs: plantaMob, lg: plantaDesk, xl: plantaDesk },
+    // },
     {
       subTitle: "Fotocélulas",
       text: "Implementadas y pensadas para el ahorro, la eficiencia y el uso racional de la luz.",
