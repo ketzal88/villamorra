@@ -8,6 +8,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApartmentsCatalogue from "./routes/apartmentsCatalogue";
 import Apartment from "./routes/apartment";
 
+const { hostname = "" } = window?.location;
+
+const path = hostname.includes("vitriumcapital") ? "/01sync-asuncion/" : "/";
+
 function App() {
   const headerRef = useRef(null);
   return (
@@ -15,14 +19,8 @@ function App() {
       <BrowserRouter>
         <Header headerRef={headerRef} />
         <Routes>
-          <Route
-            path="/01sync-asuncion"
-            element={<Home headerRef={headerRef} />}
-          />
-          <Route
-            path="/01sync-asuncion/apartments"
-            element={<ApartmentsCatalogue />}
-          >
+          <Route path={path} element={<Home headerRef={headerRef} />} />
+          <Route path={`${path}apartments`} element={<ApartmentsCatalogue />}>
             <Route path=":apartmentId" element={<Apartment />} />
           </Route>
           <Route

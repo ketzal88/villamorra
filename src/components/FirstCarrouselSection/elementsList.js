@@ -18,11 +18,6 @@ import jardinMob from "../../assets/images/mobile/Tech/Sustentabilidad/3-sust.jp
 import biciDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/4-sust.jpg";
 import biciMob from "../../assets/images/mobile/Tech/Sustentabilidad/4-sust.jpg";
 
-const text =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Pharetra massa massa ultricies mi quis hendrerit dolor magna.";
-
-const title = "Tecnología";
-
 export const elementsList = {
   Tecnología: [
     {
