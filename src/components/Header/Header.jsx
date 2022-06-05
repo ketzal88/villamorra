@@ -50,10 +50,8 @@ const Header = ({ path }) => {
 
   useEffect(() => {
     if (isHomePage) {
-      const landingSection = document.getElementById("landingSection");
       document.addEventListener("scroll", () => {
-        if (window.scrollY + 200 > landingSection?.clientHeight)
-          setIsOverLandingSection(false);
+        if (70 < window.scrollY) setIsOverLandingSection(false);
         else if (isOverLandingSection) setIsOverLandingSection(true);
       });
     }
@@ -102,13 +100,13 @@ const Header = ({ path }) => {
           >
             VITRIUM CAPITAL
           </Link>
-          <Box className={classes.imgContainer}>
+          {/* <Box className={classes.imgContainer}>
             <img
               src={entrevistaRapida}
               alt="Entrevista Rápida"
               className={classes.imgStyles}
             />
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </Box>

@@ -15,7 +15,7 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       backgroundPosition: "36% 0px",
       minHeight: "745px",
       paddingTop: "296px",
-      paddingLeft: "38px !important",
+      paddingLeft: "38px",
       [theme.breakpoints.up("md")]: {
         backgroundImage: `url(${headerLapt})`,
         backgroundPosition: "center",
@@ -24,11 +24,11 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         backgroundImage: `url(${headerDesk})`,
         minHeight: "745px",
         paddingLeft: "98px",
-        paddingTop: "296px",
       },
       [theme.breakpoints.up("xl")]: {
         minHeight: "1080px",
-        paddingTop: "392px",
+        paddingLeft: "98px",
+        paddingTop: "492px",
         maxWidth: "1920px",
       },
     },

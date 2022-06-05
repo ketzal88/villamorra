@@ -35,10 +35,13 @@ export const useHeaderStyles = makeStyles((theme) => {
       [theme.breakpoints.up("md")]: {
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "86px",
+        paddingTop: "62px",
+      },
+      [theme.breakpoints.up("lg")]: {
+        paddingTop: "68px",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingLeft: "91px",
+        paddingLeft: "98px",
         paddingRight: "111px",
       },
     },
@@ -56,6 +59,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("lg")]: {
         marginTop: "-30px",
+        marginLeft: "-20px",
         width: "132px",
         height: "136px",
       },
