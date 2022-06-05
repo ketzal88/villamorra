@@ -229,7 +229,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       height: "506px",
       width: "271px",
-      transform: "translateX(-10%) translateY(-13%)",
+      transform: "translateX(-10%) translateY(-35%)",
     },
     [theme.breakpoints.up("lg")]: {
       height: "676px",

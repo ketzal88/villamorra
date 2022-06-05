@@ -86,7 +86,8 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
         padding: "83px 122px 83px 100px",
       },
       [theme.breakpoints.up("xl")]: {
-        padding: "254px 91px 90px 100px",
+        height: "calc(100% - 254px)",
+        padding: "254px 91px 0px 100px",
       },
     },
     textSection: {

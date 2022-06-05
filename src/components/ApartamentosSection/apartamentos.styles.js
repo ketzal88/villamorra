@@ -17,7 +17,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       paddingBlock: "40px",
-      height: "1262px",
+      height: "1280px",
     },
   },
   sectionTitle: {

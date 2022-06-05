@@ -18,7 +18,7 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
       paddingLeft: "100px",
     },
     [theme.breakpoints.up("xl")]: {
-      height: "1034px",
+      height: "calc(1299px - 265px)",
       paddingTop: "265px",
     },
   },
