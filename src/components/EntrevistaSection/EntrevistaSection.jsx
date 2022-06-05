@@ -29,22 +29,36 @@ const EntrevistaSection = () => {
         <Typography variant="h2" className={classes.titleSection}>
           Agendemos una <br /> entrevista
         </Typography>
-        <Stack direction={{ xs: "column", md: "row" }}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          sx={{ overflow: "hidden" }}
+        >
           <Box className={classes.sellerImgContainer}>
             <img
               src={images[sellerChoosed].img}
               alt="Vendedor/a Sync"
               className={classes.imgSeller}
             />
-            <Box className={classes.sellerContainer}>
-              <Typography paragraph className={classes.sellerName}>
-                {images[sellerChoosed].sellerName}
-              </Typography>
-              <Typography paragraph className={classes.sellerPhone}>
-                <WhatsAppIcon className={classes.whatsAppIcon} />
-                {images[sellerChoosed].phoneNumber}
-              </Typography>
-            </Box>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              alignItems={{ md: "center", xs: "flex-start" }}
+              justifyContent={{ xs: "center", sm: "space-between" }}
+              sx={{ paddingRight: { lg: "45px" }, boxSizing: "border-box" }}
+              className={classes.sellerInfoContainer}
+            >
+              <Box>
+                <Typography paragraph className={classes.sellerName}>
+                  {images[sellerChoosed].sellerName}
+                </Typography>
+                <Typography paragraph className={classes.sellerPhone}>
+                  <WhatsAppIcon className={classes.whatsAppIcon} />
+                  {images[sellerChoosed].phoneNumber}
+                </Typography>
+              </Box>
+              <button className={classes.agendarEntrevistaButton}>
+                <Typography>Agendar una Entrevista</Typography>
+              </button>
+            </Stack>
           </Box>
           <FormEntrevista />
         </Stack>

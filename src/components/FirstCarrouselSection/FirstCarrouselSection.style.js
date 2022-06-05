@@ -12,6 +12,7 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
         paddingBottom: "0px !important",
       },
       [theme.breakpoints.up("lg")]: {
+        paddingTop: "262px",
         height: "768px",
       },
       [theme.breakpoints.up("xl")]: {

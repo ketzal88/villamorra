@@ -41,10 +41,10 @@ const AmenitiesSection = () => {
                 {text}
               </Typography>
               <Stack
-                sx={{ paddingTop: "auto" }}
-                flexDirection="row"
+                direction="row"
                 alignItems="center"
                 justifyContent="space-between"
+                className={classes.arrowCounterContainer}
               >
                 <Box className={classes.iconContainer}>
                   <ArrowButton
@@ -65,13 +65,11 @@ const AmenitiesSection = () => {
                 </Typography>
               </Stack>
             </Box>
-            {/* <img className={classes.imgSection} src={galeria} alt="galeria" /> */}
             <CardMedia
               component="img"
               image={image}
               alt={subTitle}
               className={classes.imgSection}
-              // sx={imgStyles[selectedElement]}
             />
           </Grid>
         </Stack>

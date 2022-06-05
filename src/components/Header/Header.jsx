@@ -89,17 +89,21 @@ const Header = ({ path }) => {
             }
           </Drawer>
         </Box>
-        <img src={logoVM} alt="Logo Sync" className={classes.logo} />
+        <Link to={path}>
+          <img src={logoVM} alt="Logo Sync" className={classes.logo} />
+        </Link>
         <Box className={classes.linksContainer}>
           {<Links classes={classes} setReference={setReference} path={path} />}
         </Box>
         <Box sx={{ display: "flex" }}>
-          <Link
-            to={`${path}apartaments`}
+          <a
+            href="https://vitriumcapital.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${classes.navLink} ${classes.LinkVitrium}`}
           >
             VITRIUM CAPITAL
-          </Link>
+          </a>
           {/* <Box className={classes.imgContainer}>
             <img
               src={entrevistaRapida}

@@ -13,7 +13,7 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#FFF",
-      syncBlue: "#132127",
+      syncBlue: "#1E252D",
       syncGrey: "#F7F7F7",
       syncOrange: "#F1804F",
       vmGreen: "#64a730",

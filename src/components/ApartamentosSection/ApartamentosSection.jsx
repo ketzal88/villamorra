@@ -95,23 +95,25 @@ const ApartamentosSection = () => {
             autoPlay={autoPlay}
             loop={true}
           />
-          <Typography variant="h2" className={classes.subTitle}>
-            {apartamentList[selectedElement].title}
-          </Typography>
-          <Typography className={classes.text}>
-            <span>{apartamentList[selectedElement].firstDesc}</span>
-            <br />
-            <span>{apartamentList[selectedElement].secondDesc}</span>
-          </Typography>
-          <button
-            className={classes.button}
-            style={{ opacity: 0.6 }}
-            title="funcionalidad en desarrollo"
-          >
-            <Typography sx={{ marginBottom: 0 }} fontWeight={700}>
-              VER TIPOLOGÍA
+          <Stack sx={{ height: { xs: "320px", md: "330px" } }}>
+            <Typography variant="h2" className={classes.subTitle}>
+              {apartamentList[selectedElement].title}
             </Typography>
-          </button>
+            <Typography className={classes.text}>
+              <span>{apartamentList[selectedElement].firstDesc}</span>
+              <br />
+              <span>{apartamentList[selectedElement].secondDesc}</span>
+            </Typography>
+            <button
+              className={classes.button}
+              style={{ opacity: 0.6 }}
+              title="funcionalidad en desarrollo"
+            >
+              <Typography sx={{ marginBottom: 0 }} fontWeight={700}>
+                VER TIPOLOGÍA
+              </Typography>
+            </button>
+          </Stack>
         </Stack>
       </Box>
     </Stack>

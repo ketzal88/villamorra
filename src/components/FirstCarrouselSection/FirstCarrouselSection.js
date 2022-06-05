@@ -66,7 +66,7 @@ const imgStyles = {
 const textEffect = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-200%);
+    transform: translateY(-50%);
   }
   100% {
     opacity: 1;
@@ -80,7 +80,7 @@ const textEffectExit = keyframes`
   }
   100% {
     opacity: 0;
-    transform: translateY(-200%);
+    transform: translateY(-50%);
   }
 `;
 

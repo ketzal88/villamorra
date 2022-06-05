@@ -20,7 +20,7 @@ export const useEdificioStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("xl")]: {
         backgroundSize: "1270px 1087px",
-        minHeight: "1311px",
+        minHeight: "calc(1311px - 234px)",
       },
     },
     secondWrapper: {

@@ -34,7 +34,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("xl")]: {
         fontSize: "60px !important",
-        marginBottom: "116px !important",
+        marginBottom: "73px !important",
       },
     },
     titleSection1: {
@@ -74,11 +74,15 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     },
     textWrapper: {
       width: "100%",
+      position: "relative",
       padding: "43px 38px 52px",
+      height: "438px",
       [theme.breakpoints.up("md")]: {
-        padding: "83px 180px 80px 92px",
+        height: "calc(100% - 163px)",
+        padding: "83px 92px 0px 92px",
       },
       [theme.breakpoints.up("lg")]: {
+        height: "calc(100% - 166px)",
         padding: "83px 122px 83px 100px",
       },
       [theme.breakpoints.up("xl")]: {
@@ -107,10 +111,24 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       [theme.breakpoints.up("xl")]: {
         marginTop: "20px !important",
         fontSize: "23px !important",
-        marginBottom: "150px !important",
         "-webkit-line-clamp": "4 !important",
         lineClamp: "4 !important",
         lineHeight: "1.35 !important",
+      },
+    },
+    arrowCounterContainer: {
+      position: "absolute",
+      marginBottom: "52px",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      marginLeft: "100px",
+      marginRight: "91px",
+      [theme.breakpoints.up("md")]: {
+        marginBottom: "83px",
+      },
+      [theme.breakpoints.up("lg")]: {
+        marginBottom: "92px",
       },
     },
     carrouselNumber: {
@@ -124,10 +142,10 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     },
     iconContainer: {
       order: "2",
+      width: "72px",
+      height: "72px",
       [theme.breakpoints.up("md")]: {
         order: "-1",
-        width: "72px",
-        height: "72px",
       },
       [theme.breakpoints.up("xl")]: {
         width: "108px",

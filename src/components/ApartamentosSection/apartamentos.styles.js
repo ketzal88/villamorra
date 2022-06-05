@@ -56,6 +56,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   subTitle: {
+    textAlign: "center !important",
     marginTop: "40px !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "34px !important",
@@ -71,6 +72,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   text: {
+    textAlign: "center !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "20px !important",
       marginTop: "19px !important",
