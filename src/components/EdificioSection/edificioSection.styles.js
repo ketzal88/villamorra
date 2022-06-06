@@ -15,7 +15,8 @@ export const useEdificioStyles = makeStyles((theme) => {
         height: "567px",
       },
       [theme.breakpoints.up("lg")]: {
-        backgroundPosition: "-150px 0px",
+        backgroundPosition: "0% 100%",
+        backgroundSize: "70%",
         height: "769px",
       },
       [theme.breakpoints.up("xl")]: {
