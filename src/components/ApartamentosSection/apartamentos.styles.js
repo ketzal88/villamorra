@@ -25,6 +25,10 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     fontSize: "34px !important",
     paddingBottom: "42px",
     paddingLeft: "92px",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "0px",
+      textAlign: "center"
+    },
     [theme.breakpoints.up("md")]: {
       paddingTop: "50px !important",
     },
