@@ -35,7 +35,7 @@ const LandingSection = ({ path }) => {
           </Typography>
           <Typography className={classes.mainTitle} variant="h1">
             <span>Cada espacio de tu vida,</span>
-            <span>conectado</span>
+            <span> conectado</span>
           </Typography>
           <Grid item className={classes.buttonWrapper}>
             <button

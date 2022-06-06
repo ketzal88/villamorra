@@ -45,7 +45,7 @@ export const useLadingSectionStyles = makeStyles((theme) => {
     },
     mainTitle: () => ({
       fontSize: "45px !important",
-      maxWidth: "min-content",
+      // maxWidth: "min-content",
       marginBottom: "162px !important",
       "& :nth-child(2)": {
         marginLeft: "10px",
