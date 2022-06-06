@@ -80,7 +80,7 @@ export const useHeaderStyles = makeStyles((theme) => {
         fontSize: "14px",
       },
       [theme.breakpoints.up("lg")]: {
-        marginTop: "12px",
+        marginTop: "23px",
         paddingRight: "24px",
         fontSize: "17px",
       },
