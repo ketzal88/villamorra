@@ -56,6 +56,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       [theme.breakpoints.down("lg")]: {
         width: "132px",
         height: "136px",
+        marginLeft: "-44px",
       },
       [theme.breakpoints.up("lg")]: {
         marginTop: "-30px",
