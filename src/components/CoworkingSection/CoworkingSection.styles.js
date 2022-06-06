@@ -55,6 +55,9 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis !important",
     "-webkit-line-clamp": "8 !important",
     lineClamp: "8 !important",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
     [theme.breakpoints.up("md")]: {
       paddingInline: "211px !important",
       "-webkit-line-clamp": "4 !important",
