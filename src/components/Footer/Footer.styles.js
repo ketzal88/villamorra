@@ -10,8 +10,10 @@ export const useFooterStyles = makeStyles((theme) => ({
     justifyContent: "center",
     paddingBlock: "72px",
     [theme.breakpoints.up("sm")]: {
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       paddingBlock: "53px",
+      paddingLeft: "53px",
+      paddingRight: "93px",
     },
     [theme.breakpoints.up("lg")]: {
       paddingBlock: "111px",
@@ -53,7 +55,7 @@ export const useFooterStyles = makeStyles((theme) => ({
     height: "88px",
     marginBottom: "72px",
     [theme.breakpoints.up("md")]: {
-      marginLeft: "80px",
+      // marginLeft: "80px",
       marginBotom: "0px",
     },
   },
