@@ -45,7 +45,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       marginLeft: "-50px",
     },
     [theme.breakpoints.up("lg")]: {
-      columnGap: "112px",
+      columnGap: "90px",
       rowGap: "58px",
       paddingRight: "108px",
       marginLeft: "-50px",
@@ -281,8 +281,8 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       maxWidth: "336px",
     },
     [theme.breakpoints.up("lg")]: {
-      padding: "29px 0px 29px 134px",
-      fontSize: "17px",
+      padding: "29px 0px",
+      fontSize: "19px",
       marginTop: "86px",
       maxWidth: "372px",
     },
@@ -293,11 +293,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   carrotButton: {
     color: "white",
-    [theme.breakpoints.up("md")]: {
-      marginLeft: "97px",
-    },
+    position: "absolute",
+    marginLeft: "20% !important",
     [theme.breakpoints.up("xl")]: {
-      marginLeft: "88px",
+      marginLeft: "18% !important",
       paddingRight: "42px",
     },
   },
