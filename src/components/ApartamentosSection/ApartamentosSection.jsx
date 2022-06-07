@@ -91,9 +91,8 @@ const ApartamentosSection = () => {
             ref={videoRef}
             className={classes.imgContainer}
             src={videoSources[selectedElement]}
-            controls={true}
-            autoPlay={autoPlay}
-            loop={true}
+            autoPlay={autoPlay.toString()}
+            loop="true"
           />
           <Stack sx={{ height: { xs: "320px", md: "330px" } }}>
             <Typography variant="h2" className={classes.subTitle}>
