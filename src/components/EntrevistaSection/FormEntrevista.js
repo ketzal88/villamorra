@@ -129,11 +129,10 @@ const FormEntrevista = () => {
           />
         </FormControl>
       </Stack>
-      <FormControl variant="standard" className={classes.formControl}>
+      <FormControl className={classes.formControl}>
         <InputLabel
           shrink
           className={classes.inputLabel}
-          sx={{ paddingLeft: "20px" }}
           required
         >
           Selecciona un país
@@ -141,7 +140,6 @@ const FormEntrevista = () => {
         <Select
           name="00Nj0000008ze1B"
           className={classes.selectInput}
-          classes={{ underline: classes.underlineInput }}
           value={data["00Nj0000008ze1B"]}
           onChange={handleChange}
           sx={{
