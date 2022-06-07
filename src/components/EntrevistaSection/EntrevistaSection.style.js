@@ -58,6 +58,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   formControl: {
+    justifyContent: "space-around",
     [theme.breakpoints.down("lg")]: {
       width: "336px",
       height: "79px",
@@ -70,10 +71,13 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   selectInput: {
+    height: "36px !important",
     marginTop: "44px !important",
-    height: "79px",
     "& .MuiSelect-select": {
+      height: "32px !important",
+      borderRadius: "0 !important",
       borderBottom: `4px solid #74A444`,
+      padding: "0 !important",
       "&:before": {
         borderBottom: `4px solid #74A444`,
       },
@@ -81,6 +85,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
         borderBottom: `4px solid #74A444`,
       },
     },
+    "& .MuiOutlinedInput-notchedOutline": {
+      border: "0 !important",
+      padding: "4px 0 5px !important"
+    }
   },
   codAreaForm: {
     [theme.breakpoints.down("lg")]: {
