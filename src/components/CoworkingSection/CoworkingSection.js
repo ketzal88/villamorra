@@ -35,7 +35,12 @@ const CoworkingSection = () => {
         alignItems="center"
         className={classes.recorridoVirtualWrapper}
       >
-        <button className={classes.recorridoButton}>RECORRIDO VIRTUAL</button>
+        <iframe
+          title="Recorrido Virtual Vitrium"
+          src="https://www.xline3d.com/360/VillaMorraV_00/"
+          width="100%"
+          height="100%"
+        />
       </Stack>
     </Stack>
   );
