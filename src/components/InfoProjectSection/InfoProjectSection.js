@@ -1,7 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import aboutProject from "../../assets/01-Sync-Asunción-Alta-1.mp4";
-
 import { useInfoProjectSectionStyles } from "./InfoProjectSection.style";
 
 const InfoProjectSection = () => {
@@ -21,15 +20,16 @@ const InfoProjectSection = () => {
     }
   };
 
+  const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
+
   useEffect(() => {
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
     if (videoRef.current) {
-      observer.observe(videoRef.current);
       videoRef.current.volume = 0.2;
+      observer.observe(videoRef.current);
     }
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,7 +55,7 @@ const InfoProjectSection = () => {
           <video
             ref={videoRef}
             className={classes.imageBox}
-            src={aboutProject ?? ""}
+            src={aboutProject}
             autoPlay={autoPlay}
             loop={true}
           />

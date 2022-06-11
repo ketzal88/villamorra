@@ -52,9 +52,13 @@ const Footer = () => {
               Email
             </Typography>
             <Typography paragraph className={classes.text}>
-              ventas@vitriumcapital.com
+              <a href="mailto:ventas@vitriumcapital.com">
+                ventas@vitriumcapital.com
+              </a>
               <br />
-              brokers@vitriumcapital.com
+              <a href="mailto:brokers@vitriumcapital.com">
+                brokers@vitriumcapital.com
+              </a>
             </Typography>
           </Box>
           <Box className={classes.socialMedias}>
