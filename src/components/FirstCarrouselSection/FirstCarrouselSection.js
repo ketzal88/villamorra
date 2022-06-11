@@ -218,7 +218,7 @@ const FirstCarrouselSection = () => {
                 sx={{
                   backgroundColor:
                     selectedType === accessKey
-                      ? "rgba(188, 218, 250, 0.3) !important"
+                      ? "#16191E !important"
                       : "rgba(0, 0, 0, 0.08) !important",
                   color: "white",
                   borderRadius: "33px !important",
