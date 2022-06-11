@@ -22,7 +22,7 @@ const CoworkingSection = () => {
           <Typography className={classes.titleSection} variant="h2">
             Co-Working
           </Typography>
-          <Typography paragraph className={classes.textSection}>
+          <Typography className={classes.textSection}>
             Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas y
             mesas compartidas que ofrecen un ambiente de trabajo informal.
           </Typography>

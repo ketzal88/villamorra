@@ -45,7 +45,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   textSection: {
-    fontSize: "20px !important",
+    fontSize: "27px !important",
     marginTop: "40px !important",
     lineHeight: "1.3 !important",
     letterSpacing: "-.9px !important",
@@ -55,9 +55,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis !important",
     "-webkit-line-clamp": "8 !important",
     lineClamp: "8 !important",
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-    },
+    textAlign: "center",
     [theme.breakpoints.up("md")]: {
       paddingInline: "211px !important",
       "-webkit-line-clamp": "4 !important",
@@ -69,10 +67,9 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       "-webkit-line-clamp": "3 !important",
       lineClamp: "3 !important",
-      fontSize: "23px !important",
+      fontSize: "27px !important",
       paddingInline: "660px !important",
       lineHeight: "1.3 !important",
-      letterSpacing: "-.9px !important",
     },
   },
   recorridoVirtualWrapper: {

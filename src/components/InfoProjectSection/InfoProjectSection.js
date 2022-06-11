@@ -27,7 +27,10 @@ const InfoProjectSection = () => {
       rootMargin: "0px",
       threshold: 0.3,
     });
-    if (videoRef.current) observer.observe(videoRef.current);
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+      videoRef.current.volume = 0.2;
+    }
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       if (videoRef.current) observer.unobserve(videoRef.current);
