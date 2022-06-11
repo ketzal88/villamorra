@@ -1,9 +1,39 @@
 import { Box, Stack, Typography } from "@mui/material";
-import domotica from "../../assets/images/domotica.jpeg";
+import { useEffect, useRef, useState } from "react";
+import aboutProject from "../../assets/01-Sync-Asunción-Alta-1.mp4";
+
 import { useInfoProjectSectionStyles } from "./InfoProjectSection.style";
 
 const InfoProjectSection = () => {
   const classes = useInfoProjectSectionStyles();
+
+  const videoRef = useRef(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  const callback = function (entries) {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      setAutoPlay(true);
+      videoRef?.current?.play();
+    } else {
+      setAutoPlay(false);
+      videoRef?.current?.pause();
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, [videoRef]);
+
   return (
     <Stack
       sx={{
@@ -19,7 +49,13 @@ const InfoProjectSection = () => {
           <Typography variant="h3" className={classes.titleSection}>
             Conoce el proyecto
           </Typography>
-          <img className={classes.imageBox} src={domotica} alt="domótica" />
+          <video
+            ref={videoRef}
+            className={classes.imageBox}
+            src={aboutProject ?? ""}
+            autoPlay={autoPlay}
+            loop={true}
+          />
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>

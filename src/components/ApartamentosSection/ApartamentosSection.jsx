@@ -36,7 +36,7 @@ const ApartamentosSection = () => {
       rootMargin: "0px",
       threshold: 0.3,
     });
-    observer.observe(videoRef.current);
+    if (videoRef.current) observer.observe(videoRef.current);
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       if (videoRef.current) observer.unobserve(videoRef.current);
@@ -91,8 +91,8 @@ const ApartamentosSection = () => {
             ref={videoRef}
             className={classes.imgContainer}
             src={videoSources[selectedElement]}
-            autoPlay={autoPlay.toString()}
-            loop="true"
+            autoPlay={autoPlay}
+            loop={true}
           />
           <Stack sx={{ height: { xs: "320px", md: "330px" } }}>
             <Typography variant="h2" className={classes.subTitle}>
