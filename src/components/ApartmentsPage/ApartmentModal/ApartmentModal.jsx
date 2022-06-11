@@ -112,7 +112,7 @@ const ScheduleInterviewModal = ({
           </Box>
           <Divider
             sx={{
-              border: "4px solid #F1804F",
+              border: (theme) => `4px solid ${theme.palette.primary.greenVM}`,
               width: "17%",
               marginBottom: "31px",
               marginTop: "20px",
@@ -204,25 +204,6 @@ const ScheduleInterviewModal = ({
                 containerStyles={{
                   marginBottom: "100px",
                 }}
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={formValues.tyc}
-                    onChange={(e) => handleFormFieldsChange(e, "tyc")}
-                    icon={<RadioButtonUncheckedIcon />}
-                    checkedIcon={<CheckCircleIcon />}
-                    sx={{
-                      color: theme.palette.primary.vmGreen,
-                      "&.Mui-checked": {
-                        color: theme.palette.primary.vmGreen,
-                      },
-                    }}
-                  />
-                }
-                label="Acepto los términos y condiciones"
-                labelPlacement="end"
-                className={classes.modalTermsAndConditions}
               />
             </Box>
           </Grid>

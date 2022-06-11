@@ -6,7 +6,7 @@ import { useLadingSectionStyles } from "./landingSection.styles";
 const LandingSection = ({ path }) => {
   const classes = useLadingSectionStyles();
   const navigate = useNavigate();
-  const [recorridoSection, setrecorridoSection] = useState("");
+  const [recorridoSection, setRecorridoSection] = useState("");
 
   useEffect(() => {
     if (recorridoSection) {
@@ -46,7 +46,7 @@ const LandingSection = ({ path }) => {
             </button>
             <button
               className={classes.recorridoButton}
-              onClick={() => setrecorridoSection("#recorridoSection")}
+              onClick={() => setRecorridoSection("#recorridoSection")}
             >
               RECORRIDO VIRTUAL
             </button>
