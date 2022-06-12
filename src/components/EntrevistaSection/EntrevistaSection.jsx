@@ -55,7 +55,15 @@ const EntrevistaSection = () => {
                   {images[sellerChoosed].phoneNumber}
                 </Typography>
               </Box>
-              <button className={classes.agendarEntrevistaButton}>
+              <button
+                className={classes.agendarEntrevistaButton}
+                onClick={() =>
+                  // eslint-disable-next-line no-undef
+                  Calendly.initPopupWidget({
+                    url: "https://calendly.com/vitriumcapital-maketing",
+                  })
+                }
+              >
                 <Typography>Agendar una Entrevista</Typography>
               </button>
             </Stack>
