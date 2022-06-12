@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import { navLinks } from "./headerLinksList";
-import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
+// import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
 import { useHeaderStyles } from "./header.styles";
 import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -104,7 +104,7 @@ const Header = ({ path }) => {
           >
             VITRIUM CAPITAL
           </a>
-          {/* <Box className={classes.imgContainer}>
+          {/* <Box className={classes.imgContainer} onClick={() => {}}>
             <img
               src={entrevistaRapida}
               alt="Entrevista Rápida"
