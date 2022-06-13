@@ -38,13 +38,13 @@ const Footer = () => {
               Contacto
             </Typography>
             <Typography paragraph className={classes.text}>
-              Paraguay: (+595) 21 728 8640
+              Paraguay: <a href="tel:+595217288640">(+595) 21 728 8640</a>
               <br />
-              Uruguay: (+598) 2917 1663
+              Uruguay: <a href="tel:+59829171663">(+598) 2917 1663</a>
               <br />
-              Argentina: (+54) 11 2152 0660
+              Argentina: <a href="tel:+541121520660">(+54) 11 2152 0660</a>
               <br />
-              USA: (+1) 305 567 3373
+              USA: <a href="tel:+13055673373">(+1) 305 567 3373</a>
             </Typography>
           </Box>
           <Box className={classes.email}>
@@ -63,10 +63,34 @@ const Footer = () => {
           </Box>
           <Box className={classes.socialMedias}>
             <Stack direction="row" gap="25px">
-              <img src={facebook} alt="Facebook" />
-              <img src={instagram} alt="Instagram" />
-              <img src={linkedin} alt="Linkedin" />
-              <img src={youtube} alt="Youtube" />
+              <a
+                href="https://www.facebook.com/VitriumCapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={facebook} alt="Facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/vitriumcapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={instagram} alt="Instagram" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/vitriumcapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedin} alt="Linkedin" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCiaS-EB1-EhmenfzEU5RPXg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={youtube} alt="Youtube" />
+              </a>
             </Stack>
             <Typography
               paragraph
