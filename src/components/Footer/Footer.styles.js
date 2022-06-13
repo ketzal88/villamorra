@@ -11,12 +11,19 @@ export const useFooterStyles = makeStyles((theme) => ({
     paddingBlock: "72px",
     [theme.breakpoints.up("sm")]: {
       justifyContent: "space-between",
-      paddingBlock: "53px",
-      paddingLeft: "53px",
-      paddingRight: "93px",
+      paddingBlock: "0px",
+      paddingLeft: "0px",
+      paddingRight: "0px",
     },
     [theme.breakpoints.up("lg")]: {
       paddingBlock: "111px",
+    },
+  },
+  footerContent: {
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+      paddingLeft: "80px",
+      paddingRight: "111px"
     },
   },
   subTitle: {

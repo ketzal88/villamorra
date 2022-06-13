@@ -22,17 +22,19 @@ const Footer = () => {
         component="footer"
         direction={{ xs: "column", md: "row" }}
         className={classes.footerContainer}
-        id="contactSection"
-      >
-        <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+        justifyContent={{ xs: "center" }}
+        >
         <Stack
+          id="contactSection"
+          className={classes.footerContent}
           direction={{ xs: "column", md: "row" }}
           justifyContent={{ xs: "center", lg: "space-between" }}
-          alignItems={{ xs: "center", lg: "space-between" }}
+          alignItems={{ xs: "start", lg: "space-between" }}
           flexWrap="wrap"
           rowGap={{ xs: "72px", md: "0px" }}
           columnGap={{ md: "102px" }}
         >
+          <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
           <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
