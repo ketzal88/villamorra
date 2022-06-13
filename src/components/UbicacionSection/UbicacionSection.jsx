@@ -35,9 +35,8 @@ const UbicacionSection = () => {
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </Box>
         </Stack>
