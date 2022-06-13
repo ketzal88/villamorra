@@ -62,7 +62,7 @@ const InfoProjectSection = () => {
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>
-            Sustentable, Flexible <br /> y Moderno
+            Algo Innovador
           </Typography>
           <Typography className={classes.text}>
             Un desarrollo real y actual. Con el foco en el hoy, ofrece

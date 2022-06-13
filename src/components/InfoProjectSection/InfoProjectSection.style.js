@@ -71,12 +71,10 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
     fontWeight: "bold !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "24px !important",
-      lineHeight: ".8 !important",
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "34px !important",
       fontWeight: "bold !important",
-      lineHeight: ".8 !important",
     },
     [theme.breakpoints.up("xl")]: {
       paddingTop: "80px",
@@ -86,7 +84,6 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
   text: {
     overflow: "hidden",
     textOverflow: "ellipsis",
-    lineHeight: "1.1 !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "17px !important",
       paddingTop: "20px !important",
