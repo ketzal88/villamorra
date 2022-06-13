@@ -35,10 +35,10 @@ export const useHeaderStyles = makeStyles((theme) => {
       [theme.breakpoints.up("md")]: {
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "62px",
+        paddingTop: "35px",
       },
       [theme.breakpoints.up("lg")]: {
-        paddingTop: "68px",
+        paddingTop: "35px",
       },
       [theme.breakpoints.up("xl")]: {
         paddingLeft: "98px",
@@ -53,20 +53,20 @@ export const useHeaderStyles = makeStyles((theme) => {
     },
     logo: {
       marginTop: "0px",
-      [theme.breakpoints.down("lg")]: {
+      [theme.breakpoints.down("md")]: {
         width: "132px",
         height: "136px",
         marginLeft: "-44px",
       },
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up("md")]: {
         marginTop: "-30px",
         marginLeft: "-20px",
         width: "132px",
-        height: "136px",
+        height: "80px",
       },
     },
     linksContainer: {
-      marginTop: "23px",
+      marginTop: "0px",
       [theme.breakpoints.down("md")]: {
         display: "none",
       },
@@ -75,19 +75,19 @@ export const useHeaderStyles = makeStyles((theme) => {
       textShadow: "0px 3px 6px #00000060",
       [theme.breakpoints.down("lg")]: {
         padding: "12px",
-        marginTop: "12px",
         paddingRight: "24px",
         fontSize: "14px",
       },
-      [theme.breakpoints.up("lg")]: {
-        marginTop: "23px",
+      [theme.breakpoints.up("md")]: {
+        marginTop: "0px",
         paddingRight: "24px",
-        fontSize: "17px",
+        fontSize: "12px",
+        fontWeight: "700"
       },
       [theme.breakpoints.up("xl")]: {
-        marginTop: "23px",
+        marginTop: "0px",
         paddingRight: "24px",
-        fontSize: "23px",
+        fontSize: "14px",
       },
     },
     LinkVitrium: {
