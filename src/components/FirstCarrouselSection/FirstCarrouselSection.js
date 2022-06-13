@@ -30,6 +30,7 @@ import jardinDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/3-sust.
 import jardinMob from "../../assets/images/mobile/Tech/Sustentabilidad/3-sust.jpg";
 import biciDesk from "../../assets/images/Desktop/Tech/Sustentabilidad/4-sust.jpg";
 import biciMob from "../../assets/images/mobile/Tech/Sustentabilidad/4-sust.jpg";
+import clsx from "clsx";
 
 const imgStyles = {
   Tecnología: [
@@ -37,7 +38,6 @@ const imgStyles = {
       objectPosition: { xs: "0px 0px", sm: "center", md: "50% 0px" },
     },
     {
-      // objectPosition: { xs: "-100px -23px", sm: "0px -70px", md: "50% 0%" },
       transform: {
         xs: "0px -23px",
         sm: "center",
@@ -76,11 +76,35 @@ const textEffect = keyframes`
 const textEffectExit = keyframes`
   0% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+  20% {
+    opacity: .9;
+    transform: translateX(20%);
+  }
+  30% {
+    opacity: .8;
+    transform: translateX(30%);
+  }
+  40% {
+    opacity: .7;
+    transform: translateX(40%);
+  }
+  50% {
+    opacity: .6;
+    transform: translateX(50%);
+  }
+  60% {
+    opacity: .5;
+    transform: translateX(60%);
+  }
+  80% {
+    opacity: .2;
+    transform: translateX(80%);
   }
   100% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateX(100%);
   }
 `;
 
@@ -193,7 +217,10 @@ const FirstCarrouselSection = () => {
               ]
             }
             alt={subTitle}
-            className={classes.imageSection}
+            // className={classes.imageSection}
+            className={clsx(classes.imageSection, {
+              [classes.imageSectionExit]: !makeTransition,
+            })}
             sx={imgStyles[selectedType][selectedElement]}
           />
         </Box>
@@ -203,7 +230,7 @@ const FirstCarrouselSection = () => {
             "&.MuiBox-root": {
               "& > *": {
                 animation: (theme) =>
-                  `${makeTransition ? textEffect : textEffectExit} 1500ms ${
+                  `${makeTransition ? textEffect : textEffectExit} 2000ms ${
                     theme.transitions.easing.easeInOut
                   }`,
               },

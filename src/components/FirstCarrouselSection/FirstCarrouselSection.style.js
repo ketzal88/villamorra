@@ -22,6 +22,33 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       objectFit: "cover",
       height: "100%",
       width: "100%",
+      animation: `$imgEffect 3000ms ${theme.transitions.easing.easeInOut}`,
+    },
+    imageSectionExit: {
+      objectFit: "cover",
+      height: "100%",
+      width: "100%",
+      animation: `$imgEffectExit 500ms ${theme.transitions.easing.easeInOut}`,
+    },
+    "@keyframes imgEffect": {
+      "0%": {
+        opacity: 0,
+        transform: "translateX(-100%)",
+      },
+      "100%": {
+        opacity: 1,
+        transform: "translateX(0)",
+      },
+    },
+    "@keyframes imgEffectExit": {
+      "0%": {
+        opacity: 1,
+        transform: "translateX(0)",
+      },
+      "100%": {
+        opacity: 0,
+        transform: "translateX(100%)",
+      },
     },
     carrouselNumber: {
       color: "white",
