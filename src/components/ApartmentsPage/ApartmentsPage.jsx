@@ -19,6 +19,7 @@ import {
 } from "../../utils/apartmentsUtils";
 import { useApartmentsPageStyles } from "./apartmentsPage.styles";
 import { useScrollTo } from "../../customHooks/useScrollTo";
+import { hoja_4, sol_1, sol_4 } from "../../assets/images";
 
 const PISOS_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -382,7 +383,9 @@ export default function ApartmentsPage() {
                           borderRadius: "50%",
                           marginRight: "20px",
                         }}
-                      />
+                      >
+                        <img src={sol_1} />
+                      </Box>
                       <Box
                         sx={{
                           height: 49,
@@ -391,15 +394,9 @@ export default function ApartmentsPage() {
                           borderRadius: "50%",
                           marginRight: "20px",
                         }}
-                      />
-                      <Box
-                        sx={{
-                          height: 49,
-                          width: 49,
-                          backgroundColor: "white",
-                          borderRadius: "50%",
-                        }}
-                      />
+                      >
+                        <img src={hoja_4}/>
+                      </Box>
                     </Grid>
                   </Grid>
                 </Grid>
