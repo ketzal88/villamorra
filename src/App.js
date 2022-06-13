@@ -7,20 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApartmentsCatalogue from "./routes/apartmentsCatalogue";
 import Apartment from "./routes/apartment";
 
-const { hostname = "" } = window?.location;
-const path = hostname.includes("vitriumcapital") ? "/01sync-asuncion/" : "/";
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header path={path} />
+        <Header path="/" />
         <Routes>
-          <Route path={path} element={<Home path={path} />} />
-          <Route
-            path={`${path ?? "/"}apartments`}
-            element={<ApartmentsCatalogue />}
-          >
+          <Route path="/" element={<Home />} />
+          <Route path={`/apartments`} element={<ApartmentsCatalogue />}>
             <Route path=":apartmentId" element={<Apartment />} />
           </Route>
           <Route

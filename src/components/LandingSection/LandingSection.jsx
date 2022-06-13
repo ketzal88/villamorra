@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLadingSectionStyles } from "./landingSection.styles";
 
-const LandingSection = ({ path }) => {
+const LandingSection = () => {
   const classes = useLadingSectionStyles();
   const navigate = useNavigate();
   const [recorridoSection, setRecorridoSection] = useState("");
@@ -40,7 +40,7 @@ const LandingSection = ({ path }) => {
           <Grid item className={classes.buttonWrapper}>
             <button
               className={classes.apartamentsButton}
-              onClick={() => navigate(`${path}apartments`)}
+              onClick={() => navigate(`/apartments`)}
             >
               VER APARTAMENTOS
             </button>

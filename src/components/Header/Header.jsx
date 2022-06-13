@@ -11,11 +11,11 @@ import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useScrollTo } from "../../customHooks/useScrollTo";
 
-const Links = ({ classes, setReference, path }) =>
+const Links = ({ classes, setReference }) =>
   navLinks.map(({ label, link, reference }) => (
     <Link
       key={label}
-      to={path === link ? `${path}` : `${path}${link}`}
+      to={link}
       onClick={(e) => {
         !link && e.preventDefault();
         setReference(reference ?? "");
@@ -29,10 +29,6 @@ const Links = ({ classes, setReference, path }) =>
 const Header = ({ path }) => {
   const [drawerStatus, setDrawerStatus] = useState(false);
   const { pathname } = useLocation();
-  const isHomePage =
-    pathname === "/01sync-asuncion" ||
-    pathname === "/" ||
-    pathname === "/01sync-asuncion/";
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
   const [reference, setReference] = useState("");
 
@@ -40,7 +36,7 @@ const Header = ({ path }) => {
 
   const classes = useHeaderStyles({
     isOverLandingSection,
-    isHomePage,
+    isHomePage: pathname === "/",
   });
 
   const toggleDrawer = (open) => (e) => {
@@ -49,7 +45,7 @@ const Header = ({ path }) => {
   };
 
   useEffect(() => {
-    if (isHomePage) {
+    if (pathname === "/") {
       document.addEventListener("scroll", () => {
         if (70 < window.scrollY) setIsOverLandingSection(false);
         else if (isOverLandingSection) setIsOverLandingSection(true);
@@ -80,20 +76,14 @@ const Header = ({ path }) => {
               },
             }}
           >
-            {
-              <Links
-                classes={classes}
-                setReference={setReference}
-                path={path}
-              />
-            }
+            {<Links classes={classes} setReference={setReference} />}
           </Drawer>
         </Box>
-        <Link to={path}>
+        <Link to="/">
           <img src={logoVM} alt="Logo Sync" className={classes.logo} />
         </Link>
         <Box className={classes.linksContainer}>
-          {<Links classes={classes} setReference={setReference} path={path} />}
+          {<Links classes={classes} setReference={setReference} />}
         </Box>
         <Box sx={{ display: "flex" }}>
           <a
