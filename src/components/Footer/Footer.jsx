@@ -8,6 +8,7 @@ import youtube from "../../assets/images/youtube.svg";
 import { useFooterStyles } from "./Footer.styles";
 import logo from "../../assets/images/logoFooter.svg";
 
+
 const Footer = () => {
   const classes = useFooterStyles();
   return (
@@ -33,8 +34,14 @@ const Footer = () => {
           flexWrap="wrap"
           rowGap={{ xs: "72px", md: "0px" }}
           columnGap={{ md: "102px" }}
-        >
-          <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+        > 
+          <a
+            href="https://vitriumcapital.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+          </a>
           <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
@@ -64,7 +71,7 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box className={classes.socialMedias}>
-            <Stack direction="row" gap="25px">
+            <Stack direction="row" gap="25px" alignItems="center">
               <a
                 href="https://www.facebook.com/VitriumCapital/"
                 target="_blank"
