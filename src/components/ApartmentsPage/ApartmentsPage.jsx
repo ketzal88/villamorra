@@ -19,7 +19,7 @@ import {
 } from "../../utils/apartmentsUtils";
 import { useApartmentsPageStyles } from "./apartmentsPage.styles";
 import { useScrollTo } from "../../customHooks/useScrollTo";
-import { hoja_4, sol_1, sol_4 } from "../../assets/images";
+import { hoja_4, sol_1} from "../../assets/images";
 
 const PISOS_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
