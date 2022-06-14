@@ -55,20 +55,25 @@ export const useFooterStyles = makeStyles((theme) => ({
     },
   },
   socialMedias: {
-    [theme.breakpoints.down("xl")]: {
-      // display: "none",
-    },
     [theme.breakpoints.down("sm")]: {
       paddingRight: "64px"
+    },
+  },
+  lgoFooterContainer: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      textAlign: "center",
+      marginLeft: "-20px !important",
     },
   },
   logoFooter: {
     width: "168px",
     height: "88px",
-    // marginBottom: "72px",
     [theme.breakpoints.up("md")]: {
-      // marginLeft: "80px",
       marginBotom: "0px",
+    },
+    [theme.breakpoints.down("xs")]: {
+
     },
   },
 }));

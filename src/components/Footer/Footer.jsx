@@ -36,13 +36,18 @@ const Footer = () => {
           rowGap={{ xs: "72px", md: "0px" }}
           columnGap={{ md: "102px", lg: "50px" }}
         > 
-          <a
-            href="https://vitriumcapital.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Box
+            className={classes.lgoFooterContainer}
+            justifyContent={{ xs: "center" }}
           >
-            <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
-          </a>
+            <a
+              href="https://vitriumcapital.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+            </a>
+          </Box>        
           <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
