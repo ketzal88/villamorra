@@ -11,19 +11,21 @@ export const useFooterStyles = makeStyles((theme) => ({
     paddingBlock: "72px",
     [theme.breakpoints.up("sm")]: {
       justifyContent: "space-between",
-      paddingBlock: "0px",
       paddingLeft: "0px",
       paddingRight: "0px",
     },
     [theme.breakpoints.up("lg")]: {
       paddingBlock: "111px",
     },
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "32px"
+    }
   },
   footerContent: {
     [theme.breakpoints.up("lg")]: {
       width: "100%",
       paddingLeft: "80px",
-      paddingRight: "111px"
+      paddingRight: "111px",
     },
   },
   subTitle: {
@@ -42,25 +44,28 @@ export const useFooterStyles = makeStyles((theme) => ({
   },
   text: {
     fontSize: "17px !important",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "20px !important",
     },
     [theme.breakpoints.up("md")]: {
       fontSize: "14px !important",
     },
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("xl")]: {
       fontSize: "20px !important",
     },
   },
   socialMedias: {
     [theme.breakpoints.down("xl")]: {
-      display: "none",
+      // display: "none",
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingRight: "64px"
     },
   },
   logoFooter: {
     width: "168px",
     height: "88px",
-    marginBottom: "72px",
+    // marginBottom: "72px",
     [theme.breakpoints.up("md")]: {
       // marginLeft: "80px",
       marginBotom: "0px",

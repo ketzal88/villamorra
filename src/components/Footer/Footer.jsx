@@ -9,6 +9,7 @@ import { useFooterStyles } from "./Footer.styles";
 import logo from "../../assets/images/logoFooter.svg";
 
 
+
 const Footer = () => {
   const classes = useFooterStyles();
   return (
@@ -30,10 +31,10 @@ const Footer = () => {
           className={classes.footerContent}
           direction={{ xs: "column", md: "row" }}
           justifyContent={{ xs: "center", lg: "space-between" }}
-          alignItems={{ xs: "start", lg: "space-between" }}
+          alignItems={{ xs: "start", md: "space-between" }}
           flexWrap="wrap"
           rowGap={{ xs: "72px", md: "0px" }}
-          columnGap={{ md: "102px" }}
+          columnGap={{ md: "102px", lg: "50px" }}
         > 
           <a
             href="https://vitriumcapital.com/"
@@ -108,7 +109,7 @@ const Footer = () => {
             >
               Aviso Legal | Politica de Privacida
               <br />
-              Vitrium Capital © Todos los derechos <br /> reservados
+              Vitrium Capital © Todos los<br/> derechos reservados
             </Typography>
           </Box>
         </Stack>
