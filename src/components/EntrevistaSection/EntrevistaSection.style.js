@@ -250,6 +250,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       width: "457px",
       transform: "translateX(-7%) translateY(10%)",
     },
+    [theme.breakpoints.down("md")]: {
+      height: " 370px !important",
+      transform: "translateX(-7%) translateY(-20%)",
+    }
   },
   radioButton: {
     "& svg": {
