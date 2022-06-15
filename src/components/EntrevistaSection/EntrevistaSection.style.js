@@ -279,21 +279,20 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   buttonSubmit: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: theme.palette.primary.vmGreen,
+    position: "relative",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexWrap: "nowrap",
     borderRadius: "46px",
     fontWeight: "bold",
-    padding: "33px 0px 33px 0px",
+    padding: "33px 50px 33px 50px !important",
     width: "100%",
     fontSize: "17px",
-    textAlign: "center",
+    textAlign: "left",
     [theme.breakpoints.up("sm")]: {
       maxWidth: "336px",
     },
     [theme.breakpoints.up("lg")]: {
-      padding: "29px 0px",
       fontSize: "19px",
       marginTop: "86px",
       maxWidth: "372px",
@@ -304,12 +303,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   carrotButton: {
+
     color: "white",
     position: "absolute",
-    marginLeft: "20% !important",
-    [theme.breakpoints.up("xl")]: {
-      marginLeft: "18% !important",
-      paddingRight: "42px",
-    },
+    right: "20px"
+
   },
 }));
