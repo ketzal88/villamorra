@@ -49,7 +49,7 @@ const AmenitiesSection = () => {
                 <Box className={classes.iconContainer}>
                   <ArrowButton
                     buttonAction={() => {
-                      if (selectedElement === 6) return setSelectedElement(0);
+                      if (selectedElement === 5) return setSelectedElement(0);
                       setSelectedElement(selectedElement + 1);
                     }}
                   />
