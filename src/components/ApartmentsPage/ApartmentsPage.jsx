@@ -331,6 +331,7 @@ export default function ApartmentsPage() {
                   flexDirection="column"
                   flexWrap="unset"
                   className={classes.cardBody}
+                  justifyContent="center"
                 >
                   <Grid item xl={12}>
                     <Box sx={{ display: "flex" }}>
@@ -340,21 +341,19 @@ export default function ApartmentsPage() {
                     </Box>
                     <Box sx={{ display: "flex" }}>
                       <Typography className={classes.apartmentSize}>
-                        {formatSuperficie(apartment.superficie)}M<sup>2</sup>
+                        {formatSuperficie(apartment.superficie)}<strong> M<sup>2</sup></strong>
                       </Typography>
                     </Box>
-                  </Grid>
-                  <Divider
-                    sx={{
-                      border: (theme) =>
-                        `4px solid ${theme.palette.primary.vmGreen}`,
-                      width: "50%",
-                      marginBottom: "31px",
-                      marginTop: "20px",
-                    }}
-                    textAlign="left"
-                  />
-                  <Grid item xl={12}>
+                    <Divider
+                      sx={{
+                        border: (theme) =>
+                          `2px solid ${theme.palette.primary.vmGreen}`,
+                        width: "60%",
+                        marginBottom: "10px",
+                        marginTop: "10px",
+                      }}
+                      textAlign="left"
+                    />
                     <Box className={classes.filterBox}>
                       <Typography className={classes.pisoText}>
                         {apartment.piso}
@@ -407,7 +406,12 @@ export default function ApartmentsPage() {
                   flexDirection="column"
                   className={classes.buttonsContainer}
                 >
-                  <Grid container className={classes.buttons}>
+                  <Grid 
+                    container 
+                    className={classes.buttons}
+                    justifyContent="center"
+
+                  >
                     <Button
                       fullWidth
                       variant="outlined"
@@ -422,7 +426,10 @@ export default function ApartmentsPage() {
                       </Typography>
                     </Button>
                   </Grid>
-                  <Grid container>
+                  <Grid 
+                    container
+                    justifyContent="center"
+                  >
                     <Button
                       variant="contained"
                       fullWidth

@@ -17,6 +17,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         margin: "0 auto !important",
         height: "50px !important",
         width: "250px !important",
+        marginBottom: "25px !important",
       },
     },
     agendaText: {
@@ -34,20 +35,21 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     },
     apartmentCard: {
       width: "100%",
-      padding: "6% !important",
+      padding: "3% !important",
       backgroundColor: "#132127",
       borderRadius: "40px",
       margin: "0 0 43px 0 !important",
       textTransform: "none",
       [theme.breakpoints.down("md")]: {
         flexDirection: "column !important",
+        paddingBottom: "6% !important"
       },
     },
     apartmentsContainer: {
       width: "100%",
     },
     apartmentImageContainer: {
-      width: "33.33%",
+      width: "25%",
       [theme.breakpoints.down("md")]: {
         width: "100%",
       },
@@ -62,7 +64,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     },
     apartmentName: {
       fontSize: "50px !important",
-      fontWeight: "900 !important",
+      fontWeight: "700 !important",
       color: "white",
       [theme.breakpoints.down("md")]: {
         fontSize: "46px !important",
@@ -87,7 +89,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     },
     buttonsContainer: {
       alignItems: "flex-end !important",
-      width: "30% !important",
+      width: "40% !important",
       [theme.breakpoints.down("md")]: {
         width: "100% !important",
       },
@@ -95,13 +97,12 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     buttons: {
       marginBottom: "30px !important",
       [theme.breakpoints.down("md")]: {
-        marginBottom: "0 !important",
+        marginBottom: "15px !important",
       },
     },
     cardBody: {
-      justifyContent: "space-between",
       [theme.breakpoints.up("lg")]: {
-        width: "41.66% !important",
+        width: "30% !important",
       },
       [theme.breakpoints.up("md")]: {
         width: "35% !important",
