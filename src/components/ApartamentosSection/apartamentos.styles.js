@@ -93,7 +93,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: theme.palette.primary.vmGreen,
-    padding: "32px 116px",
+    padding: "32px 90px",
     marginTop: "40px",
     borderRadius: "46px",
     fontSize: "17px !important",
