@@ -1,4 +1,4 @@
-import galeria from "../../assets/images/imagen-galeria.jpg";
+import parrilleros from "../../assets/images/imagen-parrilleros.jpeg";
 import wetSpa from "../../assets/images/wet-spa.jpg";
 import solarium from "../../assets/images/solarium.jpg";
 import laundry from "../../assets/images/laundry.jpeg";
@@ -9,15 +9,9 @@ const title = "Work & Live";
 export const amenitiesItemsList = [
   {
     title,
-    // subTitle: "Parrilleros",
-    text: "Espacios pensados para disfrutar en cualquier momento del día. Sus exclusivas vistas panorámicas y la posibilidad de compartir momentos únicos brindan la fusión ideal entre comodidad y confort.",
-    image: galeria,
-  },
-  {
-    title,
     subTitle: "Parrilleros",
     text: "2 Parrillas con todo lo necesario para cocinar cómodamente.",
-    image: galeria,
+    image: parrilleros,
   },
   {
     title,
