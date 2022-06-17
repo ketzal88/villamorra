@@ -62,7 +62,7 @@ export const useHeaderStyles = makeStyles((theme) => {
         marginTop: "-30px",
         marginLeft: "-20px",
         width: "132px",
-        height: "80px",
+        height: "95px",
       },
     },
     linksContainer: {
@@ -97,6 +97,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("lg")]: {
         display: "flex",
+        paddingTop: "2px",
       },
     },
     imgContainer: {
