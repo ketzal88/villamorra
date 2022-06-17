@@ -51,6 +51,11 @@ export const useHeaderStyles = makeStyles((theme) => {
         display: "none",
       },
     },
+    drawerCloseButton: {
+      // backgroundColor: "red !important",
+      position: "absolute !important",
+      right: "30px"
+    },
     logo: {
       marginTop: "0px",
       [theme.breakpoints.down("md")]: {
