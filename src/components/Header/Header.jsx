@@ -9,22 +9,9 @@ import { navLinks } from "./headerLinksList";
 import { useHeaderStyles } from "./header.styles";
 import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
+import MenuIconClose from "@mui/icons-material/Close";
 import { useScrollTo } from "../../customHooks/useScrollTo";
 
-const Links = ({ classes, setReference }) =>
-  navLinks.map(({ label, link, reference }) => (
-    <Link
-      key={label}
-      to={link}
-      onClick={(e) => {
-        !link && e.preventDefault();
-        setReference(reference ?? "");
-      }}
-      className={classes.navLink}
-    >
-      {label}
-    </Link>
-  ));
 
 const Header = ({ path }) => {
   const [drawerStatus, setDrawerStatus] = useState(false);
@@ -33,6 +20,22 @@ const Header = ({ path }) => {
   const [reference, setReference] = useState("");
 
   useScrollTo(reference);
+
+  const Links = ({ classes, setReference }) =>
+  navLinks.map(({ label, link, reference }) => (
+    <Link
+      key={label}
+      to={link}
+      onClick={(e) => {
+        !link && e.preventDefault();
+        setReference(reference ?? "");
+        setDrawerStatus(false)
+      }}
+      className={classes.navLink}
+    >
+      {label}
+    </Link>
+  ));
 
   const classes = useHeaderStyles({
     isOverLandingSection,
@@ -76,6 +79,14 @@ const Header = ({ path }) => {
               },
             }}
           >
+            <IconButton
+              className={classes.drawerCloseButton}
+              aria-label="close drawer"
+              edge="end"
+              onClick={() => setDrawerStatus(false)}
+            >
+              <MenuIconClose sx={{ color: "white" }} />
+            </IconButton>
             {<Links classes={classes} setReference={setReference} />}
           </Drawer>
         </Box>
