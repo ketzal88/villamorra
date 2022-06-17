@@ -69,6 +69,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       width: "534px",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "325px",
+      height: "50px",
+    },
   },
   selectInput: {
     height: "36px !important",
@@ -116,6 +120,9 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       fontSize: "30px !important",
       color: "#707070 !important",
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "24px !important"
+    }
   },
   inputForm: {
     "&.MuiInput-root": {
