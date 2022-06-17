@@ -58,8 +58,20 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       width: "1200px",
       height: "700px",
     },
-    [theme.breakpoints.down("md")]: {
-      height: "230px"
+    [theme.breakpoints.up("sm")]: {
+      height: "391px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "250px"
+    }
+  },
+  videoArrow: {
+    position: "absolute",
+    zIndex: 2,
+    cursor: "pointer",
+    top: "5%",
+    [theme.breakpoints.up("sm")]: {
+      top: "20%"
     }
   },
   subTitle: {

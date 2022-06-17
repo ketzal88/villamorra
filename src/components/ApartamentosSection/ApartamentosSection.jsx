@@ -57,12 +57,9 @@ const ApartamentosSection = () => {
           <img
             src={arrow}
             alt="right arrow"
+            className={classes.videoArrow}
             style={{
-              position: "absolute",
               right: 0,
-              top: "5%",
-              zIndex: 2,
-              cursor: "pointer",
             }}
             onClick={() => {
               setSelectedElement(
@@ -72,14 +69,11 @@ const ApartamentosSection = () => {
           />
           <img
             src={arrow}
+            className={classes.videoArrow}
             alt="left arrow"
             style={{
               transform: "rotate(180deg)",
-              position: "absolute",
               left: 0,
-              top: "5%",
-              zIndex: 2,
-              cursor: "pointer",
             }}
             onClick={() => {
               setSelectedElement(
