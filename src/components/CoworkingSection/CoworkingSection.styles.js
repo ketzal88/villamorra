@@ -85,6 +85,9 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       height: "756px",
     },
+    [theme.breakpoints.down("md")]: {
+      display: "none !important"
+    }
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
