@@ -177,6 +177,9 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       width: "850px",
       paddingLeft: "93px",
     },
+    [theme.breakpoints.down("md")]: {
+      height: "unset",
+    }
   },
   sellerName: {
     color: theme.palette.primary.vmGreen,
@@ -209,7 +212,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   agendarEntrevistaButton: {
-    display: "none",
+    display: "flex",
     borderRadius: "46px",
     backgroundColor: theme.palette.primary.vmGreen,
     border: "none",
@@ -224,9 +227,6 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
         fontSize: "18px !important",
         padding: "33px 27px !important",
       },
-    },
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
     },
   },
   imgSeller: {
