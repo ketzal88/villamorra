@@ -60,7 +60,7 @@ const ApartamentosSection = () => {
             style={{
               position: "absolute",
               right: 0,
-              top: "20%",
+              top: "5%",
               zIndex: 2,
               cursor: "pointer",
             }}
@@ -77,7 +77,7 @@ const ApartamentosSection = () => {
               transform: "rotate(180deg)",
               position: "absolute",
               left: 0,
-              top: "20%",
+              top: "5%",
               zIndex: 2,
               cursor: "pointer",
             }}

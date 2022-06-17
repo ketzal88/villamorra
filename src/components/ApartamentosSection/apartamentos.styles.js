@@ -58,6 +58,9 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       width: "1200px",
       height: "700px",
     },
+    [theme.breakpoints.down("md")]: {
+      height: "230px"
+    }
   },
   subTitle: {
     textAlign: "center !important",
