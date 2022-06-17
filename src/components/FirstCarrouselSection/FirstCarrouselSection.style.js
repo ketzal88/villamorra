@@ -87,6 +87,9 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       [theme.breakpoints.up("xl")]: {
         padding: "163px 111px 0px 80px",
       },
+      [theme.breakpoints.down("sm")]: {
+        width: "80%",
+      },
     },
     subTitleSection: {
       fontWeight: "bold !important",

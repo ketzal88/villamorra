@@ -4,6 +4,7 @@ import {
   Box,
   CardMedia,
   Chip,
+  Grid,
   Stack,
   Typography,
   useMediaQuery,
@@ -213,7 +214,7 @@ const FirstCarrouselSection = () => {
             component="img"
             image={
               carrouselImages[selectedType][selectedElement][
-                laptop && !desktop ? "lg" : desktop ? "xl" : "xs"
+              laptop && !desktop ? "lg" : desktop ? "xl" : "xs"
               ]
             }
             alt={subTitle}
@@ -230,14 +231,15 @@ const FirstCarrouselSection = () => {
             "&.MuiBox-root": {
               "& > *": {
                 animation: (theme) =>
-                  `${makeTransition ? textEffect : textEffectExit} 2000ms ${
-                    theme.transitions.easing.easeInOut
+                  `${makeTransition ? textEffect : textEffectExit} 2000ms ${theme.transitions.easing.easeInOut
                   }`,
               },
             },
           }}
         >
-          <Stack direction="row" sx={{ animation: "none !important" }}>
+          <Stack direction="row" sx={{ animation: "none !important" }}
+            spacing={2}
+          >
             {Object.keys(elementsList).map((accessKey, index) => (
               <Chip
                 key={index}
@@ -250,7 +252,7 @@ const FirstCarrouselSection = () => {
                   color: "white",
                   borderRadius: "33px !important",
                   height: "max-content",
-                  fontSize: { xs: "18px", lg: "25px" },
+                  fontSize: { xs: "14px", lg: "25px" },
                   "&.MuiChip-root": () => ({
                     "& .MuiChip-label": {
                       opacity: "1 !important",
