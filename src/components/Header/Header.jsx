@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
+import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import { navLinks } from "./headerLinksList";
 // import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
@@ -11,7 +12,7 @@ import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuIconClose from "@mui/icons-material/Close";
 import { useScrollTo } from "../../customHooks/useScrollTo";
-
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const Header = ({ path }) => {
   const [drawerStatus, setDrawerStatus] = useState(false);
@@ -22,20 +23,20 @@ const Header = ({ path }) => {
   useScrollTo(reference);
 
   const Links = ({ classes, setReference }) =>
-  navLinks.map(({ label, link, reference }) => (
-    <Link
-      key={label}
-      to={link}
-      onClick={(e) => {
-        !link && e.preventDefault();
-        setReference(reference ?? "");
-        setDrawerStatus(false)
-      }}
-      className={classes.navLink}
-    >
-      {label}
-    </Link>
-  ));
+    navLinks.map(({ label, link, reference }) => (
+      <Link
+        key={label}
+        to={link}
+        onClick={(e) => {
+          !link && e.preventDefault();
+          setReference(reference ?? "");
+          setDrawerStatus(false);
+        }}
+        className={classes.navLink}
+      >
+        {label}
+      </Link>
+    ));
 
   const classes = useHeaderStyles({
     isOverLandingSection,
@@ -85,14 +86,41 @@ const Header = ({ path }) => {
               edge="end"
               onClick={() => setDrawerStatus(false)}
             >
-              <MenuIconClose sx={{ color: "white" }} />
+              <MenuIconClose sx={{ color: "white", marginTop: "20px" }} />
             </IconButton>
-            {<Links classes={classes} setReference={setReference} />}
+            <Grid
+              flexDirection="column"
+              container
+              sx={{
+                paddingTop: "60px",
+                paddingLeft: "20px",
+              }}
+            >
+              {<Links classes={classes} setReference={setReference} />}
+            </Grid>
           </Drawer>
         </Box>
+
         <Link to="/">
           <img src={logoVM} alt="Logo Sync" className={classes.logo} />
         </Link>
+
+        <IconButton
+          aria-label="customer service"
+          sx={(theme) => ({
+            position: "absolute",
+            right: "38px",
+            backgroundColor: "white",
+            height: "48px",
+            width: "48px",
+            [theme.breakpoints.up("sm")]: {
+              display: "none",
+            },
+          })}
+        >
+          <SupportAgentIcon />
+        </IconButton>
+
         <Box className={classes.linksContainer}>
           {<Links classes={classes} setReference={setReference} />}
         </Box>
