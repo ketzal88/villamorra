@@ -23,10 +23,16 @@ export const useHeaderStyles = makeStyles((theme) => {
       right: "0",
       zindex: "10",
       justifyContent: "space-between",
+      alignItems: "center",
       backgroundColor: ({ isHomePage, isOverLandingSection }) => {
         if (!isHomePage) return theme.palette.primary.syncBlue;
         if (isOverLandingSection) return "transparent";
         else return theme.palette.primary.syncBlue;
+      },
+      height: "84px",
+      [theme.breakpoints.up("sm")]: {
+        height: "auto",
+        alignItems: "flex-start",
       },
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",
@@ -46,7 +52,9 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
     },
     drawerBox: {
-      paddingTop: "50px",
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "50px",
+      },
       [theme.breakpoints.up("md")]: {
         display: "none",
       },
@@ -54,11 +62,17 @@ export const useHeaderStyles = makeStyles((theme) => {
     drawerCloseButton: {
       // backgroundColor: "red !important",
       position: "absolute !important",
-      right: "30px"
+      right: "30px",
     },
     logo: {
-      marginTop: "0px",
-      [theme.breakpoints.down("md")]: {
+      width: "70px",
+      position: "absolute",
+      left: "50%",
+      top: "6px",
+      transform: "translateX(-50%)",
+      [theme.breakpoints.up("sm")]: {
+        position: "relative",
+        marginTop: 0,
         width: "132px",
         height: "136px",
         marginLeft: "-44px",
@@ -87,7 +101,7 @@ export const useHeaderStyles = makeStyles((theme) => {
         marginTop: "0px",
         paddingRight: "24px",
         fontSize: "12px",
-        fontWeight: "700"
+        fontWeight: "700",
       },
       [theme.breakpoints.up("xl")]: {
         marginTop: "0px",
@@ -104,6 +118,9 @@ export const useHeaderStyles = makeStyles((theme) => {
         display: "flex",
         paddingTop: "2px",
       },
+    },
+    customerService: {
+      backgroundColor: "white",
     },
     imgContainer: {
       display: "flex",
