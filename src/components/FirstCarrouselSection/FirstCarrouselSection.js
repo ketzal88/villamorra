@@ -36,7 +36,7 @@ import clsx from "clsx";
 const imgStyles = {
   Tecnología: [
     {
-      objectPosition: { xs: "0px 0px", sm: "center", md: "50% 0px" },
+      objectPosition: { xs: "center", sm: "center", md: "50% 0px" },
     },
     {
       transform: {
@@ -46,12 +46,12 @@ const imgStyles = {
       },
     },
     {
-      objectPosition: { xs: "0px -23px", sm: "center", md: "50% 0px" },
+      objectPosition: { xs: "center", sm: "center", md: "50% 0px" },
     },
   ],
   Sustentabilidad: [
     {
-      objectPosition: { xs: "0px -23px", sm: "center", md: "50% 0px" },
+      objectPosition: { xs: "center", sm: "center", md: "50% 0px" },
     },
     {
       transform: {
@@ -59,7 +59,7 @@ const imgStyles = {
       },
     },
     {
-      objectPosition: { xs: "0px -23px", sm: "center", md: "50% 0px" },
+      objectPosition: { xs: "center", sm: "center", md: "50% 0px" },
     },
   ],
 };
@@ -168,6 +168,7 @@ const FirstCarrouselSection = () => {
   const [selectedElement, setSelectedElement] = useState(0);
   const [makeTransition, setMakeTransition] = useState(true);
   const [selectedType, setSelectedType] = useState(FIRSTCARROUSELTYPE);
+  const mobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const laptop = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const desktop = useMediaQuery((theme) => theme.breakpoints.up("xl"));
 
@@ -195,26 +196,29 @@ const FirstCarrouselSection = () => {
             position: "relative",
             overflow: "hidden",
             width: { xs: "100%", md: "746px", lg: "1180px" },
-            height: { xs: "391px", sm: "center", md: "100%" },
+            height: { xs: "95vh", sm: "center", md: "100%" },
           }}
         >
-          <Typography
-            className={classes.carrouselNumber}
-            sx={{ position: "absolute", zIndex: 2 }}
-          >
+          {!mobile && (
             <Typography
-              component="span"
-              className={`${classes.carrouselNumber} ${classes.selectedSlide}`}
+              className={classes.carrouselNumber}
+              sx={{ position: "absolute", zIndex: 2 }}
             >
-              {(selectedElement + 1).toString().padStart(2, "0")}/
+              <Typography
+                component="span"
+                className={`${classes.carrouselNumber} ${classes.selectedSlide}`}
+              >
+                {(selectedElement + 1).toString().padStart(2, "0")}/
+              </Typography>
+              {elementsList[selectedType].length.toString().padStart(2, "0")}
             </Typography>
-            {elementsList[selectedType].length.toString().padStart(2, "0")}
-          </Typography>
+          )}
+
           <CardMedia
             component="img"
             image={
               carrouselImages[selectedType][selectedElement][
-              laptop && !desktop ? "lg" : desktop ? "xl" : "xs"
+                laptop && !desktop ? "lg" : desktop ? "xl" : "xs"
               ]
             }
             alt={subTitle}
@@ -225,19 +229,28 @@ const FirstCarrouselSection = () => {
             sx={imgStyles[selectedType][selectedElement]}
           />
         </Box>
+
         <Box
           className={classes.textBox}
           sx={{
+            marginTop: { xs: "-95vh", sm: "inherit" },
+            height: { xs: "95vh", sm: "auto" },
             "&.MuiBox-root": {
               "& > *": {
                 animation: (theme) =>
-                  `${makeTransition ? textEffect : textEffectExit} 2000ms ${theme.transitions.easing.easeInOut
+                  `${makeTransition ? textEffect : textEffectExit} 2000ms ${
+                    theme.transitions.easing.easeInOut
                   }`,
               },
             },
           }}
         >
-          <Stack direction="row" sx={{ animation: "none !important" }}
+          <Stack
+            direction="row"
+            sx={{
+              animation: "none !important",
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
             spacing={2}
           >
             {Object.keys(elementsList).map((accessKey, index) => (

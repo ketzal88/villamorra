@@ -1,4 +1,11 @@
-import { Box, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  CardMedia,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import ArrowButton from "../ArrowButton/ArrowButton";
 import { useAmennitiesSectionStyles } from "./ammenitiesSection.styles";
 import { amenitiesItemsList } from "./amenitiesItemsList";
@@ -8,6 +15,7 @@ const AmenitiesSection = () => {
   const classes = useAmennitiesSectionStyles();
   const [selectedElement, setSelectedElement] = useState(0);
   const { title, subTitle, text, image } = amenitiesItemsList[selectedElement];
+  const mobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
     <Stack
@@ -54,6 +62,7 @@ const AmenitiesSection = () => {
                     }}
                   />
                 </Box>
+
                 <Typography className={classes.carrouselNumber}>
                   <Typography
                     component="span"
