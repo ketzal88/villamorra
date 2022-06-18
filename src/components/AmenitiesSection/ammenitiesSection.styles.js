@@ -76,7 +76,18 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       width: "100%",
       position: "relative",
       padding: "43px 38px 52px",
-      height: "438px",
+      height: "95vh",
+      marginTop: "-95vh",
+      boxSizing: "border-box",
+      paddingTop: "33vh",
+      backgroundColor: "rgba(19,33,39,0.7)",
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "43px",
+        backgroundColor: "transparent",
+        boxSizing: "content-box",
+        height: "438px",
+        marginTop: "inherit",
+      },
       [theme.breakpoints.up("md")]: {
         height: "calc(100% - 163px)",
         padding: "83px 92px 0px 92px",
@@ -119,15 +130,18 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     },
     arrowCounterContainer: {
       position: "absolute",
-      marginBottom: "52px",
       bottom: 0,
       left: 0,
       right: 0,
       marginLeft: "100px",
       marginRight: "91px",
+      marginBottom: "150px",
+      [theme.breakpoints.up("sm")]: {
+        marginBottom: "52px",
+      },
       [theme.breakpoints.down("md")]: {
         marginLeft: "43px",
-        marginRight: "38px"
+        marginRight: "38px",
       },
       [theme.breakpoints.up("md")]: {
         marginBottom: "83px",
@@ -160,8 +174,11 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     imgSection: {
       width: "100%",
       order: "-1",
-      height: "391px",
       objectFit: "cover",
+      height: "95vh",
+      [theme.breakpoints.up("sm")]: {
+        height: "391px",
+      },
       [theme.breakpoints.up("md")]: {
         order: "1",
         maxWidth: "432px",

@@ -70,11 +70,18 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
     textBox: {
       position: "relative",
       color: "white",
-      width: "100%",
+      minWidth: "100%",
       paddingInline: "38px",
       paddingTop: "43px",
       paddingBottom: "52px !important",
       minHeight: "calc(533px - 95px)",
+      boxSizing: "border-box",
+      backgroundColor: "rgba(19,33,39,0.7)",
+      [theme.breakpoints.up("sm")]: {
+        backgroundColor: "transparent",
+        minWidth: 0,
+        boxSizing: "content-box",
+      },
       [theme.breakpoints.up("md")]: {
         paddingInline: "112px",
         paddingTop: "136px",
@@ -94,7 +101,10 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
     subTitleSection: {
       fontWeight: "bold !important",
       fontSize: "24px !important",
-      paddingTop: "40px !important",
+      paddingTop: "25vh !important",
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "40px !important",
+      },
       [theme.breakpoints.up("md")]: {
         paddingTop: "70px !important",
         fontSize: "34px !important",
@@ -131,10 +141,13 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       bottom: 0,
       width: "72px",
       height: "72px",
-      marginBottom: "52px",
+      marginBottom: "150px",
       marginRight: "38px",
       right: 0,
       animation: "none !important",
+      [theme.breakpoints.up("sm")]: {
+        marginBottom: "52px",
+      },
       [theme.breakpoints.up("md")]: {
         right: "auto",
         marginBottom: "136px",
