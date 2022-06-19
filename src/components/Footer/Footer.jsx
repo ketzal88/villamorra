@@ -8,8 +8,6 @@ import youtube from "../../assets/images/youtube.svg";
 import { useFooterStyles } from "./Footer.styles";
 import logo from "../../assets/images/logoFooter.svg";
 
-
-
 const Footer = () => {
   const classes = useFooterStyles();
   return (
@@ -25,17 +23,17 @@ const Footer = () => {
         direction={{ xs: "column", md: "row" }}
         className={classes.footerContainer}
         justifyContent={{ xs: "center" }}
-        >
+      >
         <Stack
           id="contactSection"
           className={classes.footerContent}
           direction={{ xs: "column", md: "row" }}
           justifyContent={{ xs: "center", lg: "space-between" }}
-          alignItems={{ xs: "start", md: "space-between" }}
+          alignItems={{ xs: "center", sm: "start", md: "space-between" }}
           flexWrap="wrap"
           rowGap={{ xs: "72px", md: "0px" }}
           columnGap={{ md: "102px", lg: "50px" }}
-        > 
+        >
           <Box
             className={classes.lgoFooterContainer}
             justifyContent={{ xs: "center" }}
@@ -47,7 +45,7 @@ const Footer = () => {
             >
               <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
             </a>
-          </Box>        
+          </Box>
           <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
@@ -77,7 +75,12 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box className={classes.socialMedias}>
-            <Stack direction="row" gap="25px" alignItems="center">
+            <Stack
+              direction="row"
+              gap="25px"
+              alignItems="center"
+              justifyContent={{ xs: "center", sm: "start" }}
+            >
               <a
                 href="https://www.facebook.com/VitriumCapital/"
                 target="_blank"
@@ -114,7 +117,8 @@ const Footer = () => {
             >
               Aviso Legal | Politica de Privacida
               <br />
-              Vitrium Capital © Todos los<br/> derechos reservados
+              Vitrium Capital © Todos los
+              <br /> derechos reservados
             </Typography>
           </Box>
         </Stack>
