@@ -6,8 +6,8 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     color: "white",
     maxWidth: "1920px",
     width: "100%",
-    height: "923px",
-    [theme.breakpoints.up("md")]: {
+
+    [theme.breakpoints.up("sm")]: {
       height: "759px",
       position: "relative",
     },
@@ -19,17 +19,23 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   imgSection: {
-    height: "491px",
+    height: "95vh",
     objectFit: "cover",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       height: "100%",
     },
   },
   textWrapper: {
-    backgroundColor: theme.palette.primary.syncBlue,
-    height: "432px",
+    height: "95vh",
+    marginTop: "-95vh",
     padding: "54px 38px 17px 25px",
-    [theme.breakpoints.up("md")]: {
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "0",
+      height: "100%",
       position: "absolute",
       backgroundColor: "transparent",
     },
@@ -45,7 +51,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   textSection: {
-    fontSize: "27px !important",
+    fontSize: "24px !important",
     marginTop: "40px !important",
     lineHeight: "1.3 !important",
     letterSpacing: "-.9px !important",
@@ -86,8 +92,8 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
       height: "756px",
     },
     [theme.breakpoints.down("md")]: {
-      display: "none !important"
-    }
+      display: "none !important",
+    },
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,

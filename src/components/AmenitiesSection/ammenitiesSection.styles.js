@@ -135,7 +135,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       right: 0,
       marginLeft: "100px",
       marginRight: "91px",
-      marginBottom: "150px",
+      marginBottom: "110px",
       [theme.breakpoints.up("sm")]: {
         marginBottom: "52px",
       },
