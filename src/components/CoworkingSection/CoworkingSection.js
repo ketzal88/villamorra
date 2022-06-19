@@ -1,11 +1,15 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 import cowork from "../../assets/images/Desktop/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
+import { useMediaQuery } from "@mui/material";
 
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
+  const laptop = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (
     <Stack direction="column" alignItems="center">
       <Stack
@@ -35,12 +39,20 @@ const CoworkingSection = () => {
         alignItems="center"
         className={classes.recorridoVirtualWrapper}
       >
-        <iframe
-          title="Recorrido Virtual Vitrium"
-          src="https://www.xline3d.com/360/VillaMorraV_00/"
-          width="100%"
-          height="100%"
-        />
+        {laptop ? (
+          <iframe
+            title="Recorrido Virtual Vitrium"
+            src="https://www.xline3d.com/360/VillaMorraV_00/"
+            width="100%"
+            height="100%"
+          />
+        ) : (
+          <Grid container justifyContent="center">
+            <Button variant="contained" class={classes.recorridoButton}>
+              Recorrido Virtual
+            </Button>
+          </Grid>
+        )}
       </Stack>
     </Stack>
   );

@@ -19,15 +19,15 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   imgSection: {
-    height: "95vh",
+    height: "100vh",
     objectFit: "cover",
     [theme.breakpoints.up("sm")]: {
       height: "100%",
     },
   },
   textWrapper: {
-    height: "95vh",
-    marginTop: "-95vh",
+    height: "100vh",
+    marginTop: "-100vh",
     padding: "54px 38px 17px 25px",
     boxSizing: "border-box",
     display: "flex",
@@ -82,6 +82,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     backgroundImage: `url(${recorridoVirtual})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundPosition: "35% center",
     maxWidth: "1920px",
     width: "100%",
     height: "930px",
@@ -91,16 +92,16 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       height: "756px",
     },
-    [theme.breakpoints.down("md")]: {
-      display: "none !important",
-    },
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: theme.palette.primary.vmGreen,
-    fontSize: "22px",
+    textTransform: "uppercase",
+    fontSize: "16px",
     fontWeight: "bold",
-    padding: "29px 62px",
-    borderRadius: "46px",
+    padding: "32px",
+    borderRadius: "40px",
+    border: "none",
+    [theme.breakpoints.up("sm")]: {},
   },
 }));

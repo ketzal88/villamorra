@@ -76,10 +76,10 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       width: "100%",
       position: "relative",
       padding: "43px 38px 52px",
-      height: "95vh",
-      marginTop: "-95vh",
+      height: "100vh",
+      marginTop: "-100vh",
       boxSizing: "border-box",
-      paddingTop: "33vh",
+      paddingTop: "35vh",
       backgroundColor: "rgba(19,33,39,0.7)",
       [theme.breakpoints.up("sm")]: {
         paddingTop: "43px",
@@ -135,7 +135,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       right: 0,
       marginLeft: "100px",
       marginRight: "91px",
-      marginBottom: "110px",
+      marginBottom: "130px",
       [theme.breakpoints.up("sm")]: {
         marginBottom: "52px",
       },
@@ -175,7 +175,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       width: "100%",
       order: "-1",
       objectFit: "cover",
-      height: "95vh",
+      height: "100vh",
       [theme.breakpoints.up("sm")]: {
         height: "391px",
       },
