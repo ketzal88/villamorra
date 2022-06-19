@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Grid } from "@mui/material";
 import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import cristian from "../../assets/images/Cristian Erosa.png";
@@ -39,9 +39,10 @@ const EntrevistaSection = () => {
               alt="Vendedor/a Sync"
               className={classes.imgSeller}
             />
+
             <Stack
               direction={{ xs: "column", sm: "row" }}
-              alignItems={{ md: "center", xs: "flex-start" }}
+              alignItems={{ xs: "center" }}
               justifyContent={{ xs: "center", sm: "space-between" }}
               sx={{ paddingRight: { lg: "45px" }, boxSizing: "border-box" }}
               className={classes.sellerInfoContainer}
@@ -50,10 +51,12 @@ const EntrevistaSection = () => {
                 <Typography paragraph className={classes.sellerName}>
                   {images[sellerChoosed].sellerName}
                 </Typography>
-                <Typography paragraph className={classes.sellerPhone}>
+                <Grid container alignItems="center">
                   <WhatsAppIcon className={classes.whatsAppIcon} />
-                  {images[sellerChoosed].phoneNumber}
-                </Typography>
+                  <Typography paragraph className={classes.sellerPhone}>
+                    {images[sellerChoosed].phoneNumber}
+                  </Typography>
+                </Grid>
               </Box>
               <button
                 className={classes.agendarEntrevistaButton}

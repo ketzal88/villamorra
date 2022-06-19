@@ -91,8 +91,8 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
     "& .MuiOutlinedInput-notchedOutline": {
       border: "0 !important",
-      padding: "4px 0 5px !important"
-    }
+      padding: "4px 0 5px !important",
+    },
   },
   codAreaForm: {
     [theme.breakpoints.down("lg")]: {
@@ -121,8 +121,8 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       color: "#707070 !important",
     },
     [theme.breakpoints.down("md")]: {
-      fontSize: "24px !important"
-    }
+      fontSize: "24px !important",
+    },
   },
   inputForm: {
     "&.MuiInput-root": {
@@ -152,6 +152,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   sellerImgContainer: {
     position: "relative",
+    marginTop: "100px",
     marginBottom: "-1px",
     [theme.breakpoints.up("md")]: {
       marginTop: "388px",
@@ -163,16 +164,15 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   sellerInfoContainer: {
-    backgroundColor: theme.palette.primary.syncBlue,
-    borderTopRightRadius: "145px",
-    borderBottomRightRadius: "145px",
-    position: "absolute",
-    bottom: 0,
-    paddingLeft: "53px",
     width: "100%",
     height: "100px",
-    paddingBlock: "18px",
     [theme.breakpoints.up("sm")]: {
+      backgroundColor: theme.palette.primary.syncBlue,
+      borderTopRightRadius: "145px",
+      borderBottomRightRadius: "145px",
+      position: "absolute",
+      bottom: 0,
+      width: "80%",
       paddingInline: "53px",
       height: "144px",
       paddingBlock: "35px",
@@ -186,24 +186,23 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       height: "unset",
-    }
+    },
   },
   sellerName: {
     color: theme.palette.primary.vmGreen,
     fontWeight: "bold !important",
-    marginBottom: "0px !important",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "18px !important",
-    },
+    marginBottom: "11px !important",
+    fontSize: "25px !important",
     [theme.breakpoints.up("lg")]: {
       fontSize: "30px !important",
     },
   },
   sellerPhone: {
-    color: "white",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "18px !important",
-      lineHeight: "-1.3 !important",
+    color: "#132127",
+    fontSize: "25px !important",
+    margin: "0 !important",
+    [theme.breakpoints.up("sm")]: {
+      color: "white",
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "30px !important",
@@ -212,8 +211,11 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   whatsAppIcon: {
     verticalAlign: "middle",
-    marginTop: "-8px",
+    marginRight: "5px",
     fontSize: "24px !important",
+    [theme.breakpoints.up("sm")]: {
+      color: "white",
+    },
     [theme.breakpoints.up("lg")]: {
       fontSize: "39px !important",
     },
@@ -224,6 +226,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.vmGreen,
     border: "none",
     outline: "none",
+    margin: "55px 0px",
     "& > p": {
       color: theme.palette.primary.syncBlue,
       textTransform: "uppercase !important",
@@ -235,16 +238,25 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
         padding: "33px 27px !important",
       },
     },
+    [theme.breakpoints.up("sm")]: {
+      margin: 0,
+    },
   },
   imgSeller: {
     objectFit: "contain",
-    height: "716px",
+    display: "block",
+    margin: "auto",
+    borderRadius: "50%",
+    maxHeight: "300px",
+    width: "300px",
     marginTop: "90px",
-    transform: "translateX(-20%)",
-    [theme.breakpoints.up("md")]: {
-      height: "506px",
-      width: "271px",
-      transform: "translateX(-10%) translateY(-35%)",
+    [theme.breakpoints.up("sm")]: {
+      display: "inline-block",
+      width: "231px",
+      maxHeight: "100%",
+      borderRadius: 0,
+      marginLeft: 0,
+      marginTop: "0px",
     },
     [theme.breakpoints.up("lg")]: {
       height: "676px",
@@ -260,7 +272,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       height: " 370px !important",
       transform: "translateX(-7%) translateY(-20%)",
-    }
+    },
   },
   radioButton: {
     "& svg": {
@@ -310,10 +322,8 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   carrotButton: {
-
     color: "white",
     position: "absolute",
-    right: "20px"
-
+    right: "20px",
   },
 }));
