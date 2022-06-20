@@ -1,14 +1,13 @@
 export const sendFormData = async (data) => {
+  const params = new URLSearchParams(data);
   try {
     const request = await window.fetch(
-      "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
+      `https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&${params}`,
       {
         method: "POST",
         mode: "no-cors",
-        credentials: "same-origin",
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify(data),
       }

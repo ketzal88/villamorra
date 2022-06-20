@@ -1,8 +1,9 @@
-import { Box, Stack, Typography, Grid } from "@mui/material";
+import { Box, Stack, Typography, Grid, useMediaQuery } from "@mui/material";
 import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import cristian from "../../assets/images/Cristian Erosa.png";
 import vendedora from "../../assets/images/vendedora.jpg";
+import phoneImage from "../../assets/images/chicaEntrevista.png";
 import FormEntrevista from "./FormEntrevista";
 
 const images = [
@@ -23,6 +24,7 @@ const sellerChoosed = 0;
 
 const EntrevistaSection = () => {
   const classes = usePrensaSectionStyles();
+  const tablet = useMediaQuery((theme) => theme.breakpoints.up("sm"));
   return (
     <Stack direction="row" justifyContent="center" sx={{ overflow: "hidden" }}>
       <Box className={classes.wrapperSection}>
@@ -36,9 +38,9 @@ const EntrevistaSection = () => {
           <Box className={classes.sellerImgContainer}>
             <Box className={classes.imgSellerBox}>
               <img
-                src={images[sellerChoosed].img}
+                src={tablet ? images[sellerChoosed].img : phoneImage}
                 alt="Vendedor/a Sync"
-                className={classes.imgSeller}
+                className={tablet ? classes.imgSeller : phoneImage}
               />
             </Box>
             <Stack

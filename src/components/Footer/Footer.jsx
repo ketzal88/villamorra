@@ -80,6 +80,7 @@ const Footer = () => {
               gap="25px"
               alignItems="center"
               justifyContent={{ xs: "center", sm: "start" }}
+              sx={{ marginBottom: { xs: "35px", md: "0px" } }}
             >
               <a
                 href="https://www.facebook.com/VitriumCapital/"
