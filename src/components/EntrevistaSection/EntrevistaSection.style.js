@@ -152,8 +152,11 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   sellerImgContainer: {
     position: "relative",
-    marginTop: "100px",
     marginBottom: "-1px",
+    marginTop: "150px",
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "200px",
+    },
     [theme.breakpoints.up("md")]: {
       marginTop: "388px",
       height: "506px",
@@ -172,10 +175,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       borderBottomRightRadius: "145px",
       position: "absolute",
       bottom: 0,
-      width: "80%",
       paddingInline: "53px",
       height: "144px",
       paddingBlock: "35px",
+      width: "95%",
     },
     [theme.breakpoints.up("md")]: {
       width: "600px",
@@ -242,17 +245,17 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       margin: 0,
     },
   },
-  imgSeller: {
-    objectFit: "contain",
-    display: "block",
-    margin: "auto",
+  imgSellerBox: {
+    width: "345px",
+    height: "345px",
+    marginInline: "auto",
     borderRadius: "50%",
-    maxHeight: "300px",
-    width: "300px",
-    marginTop: "90px",
+    marginBottom: "62px !important",
+    overflow: "hidden",
     [theme.breakpoints.up("sm")]: {
       display: "inline-block",
-      width: "231px",
+      // width: "231px",
+      overflow: "unset",
       maxHeight: "100%",
       borderRadius: 0,
       marginLeft: 0,
@@ -262,17 +265,51 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       height: "676px",
       width: "457px",
       marginTop: "0px",
-      transform: "translateX(-13%) translateY(5%)",
     },
     [theme.breakpoints.up("xl")]: {
       height: "676px",
       width: "457px",
-      transform: "translateX(-7%) translateY(10%)",
     },
     [theme.breakpoints.down("md")]: {
       height: " 370px !important",
-      transform: "translateX(-7%) translateY(-20%)",
     },
+  },
+  imgSeller: {
+    objectFit: "contain",
+    display: "block",
+    margin: "auto",
+    height: "100%",
+    width: "100%",
+    [theme.breakpoints.up("xs")]: {
+      transform: "translateY(20%) translateX(-5%) scale(1.4)",
+    },
+    [theme.breakpoints.up("sm")]: {
+      marginBottom: "100px",
+      transform: "translateY(0%) translateX(-6%) scale(1.4)",
+      display: "inline-block",
+      // width: "231px",
+      maxHeight: "100%",
+      borderRadius: 0,
+      marginLeft: 0,
+      marginTop: "0px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: "676px",
+
+      // width: "457px",
+      marginTop: "0px",
+      transform: "translateX(-16%) translateY(5%)",
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: "676px",
+
+      // width: "457px",
+      transform: "translateX(-7%) translateY(10%)",
+    },
+    // [theme.breakpoints.down("md")]: {
+    //   height: " 370px !important",
+    //   transform: "translateX(-7%) translateY(-20%)",
+    // },
   },
   radioButton: {
     "& svg": {

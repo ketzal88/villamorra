@@ -34,14 +34,15 @@ const EntrevistaSection = () => {
           sx={{ overflow: "hidden" }}
         >
           <Box className={classes.sellerImgContainer}>
-            <img
-              src={images[sellerChoosed].img}
-              alt="Vendedor/a Sync"
-              className={classes.imgSeller}
-            />
-
+            <Box className={classes.imgSellerBox}>
+              <img
+                src={images[sellerChoosed].img}
+                alt="Vendedor/a Sync"
+                className={classes.imgSeller}
+              />
+            </Box>
             <Stack
-              direction={{ xs: "column", sm: "row" }}
+              direction={{ xs: "column", md: "row" }}
               alignItems={{ xs: "center" }}
               justifyContent={{ xs: "center", sm: "space-between" }}
               sx={{ paddingRight: { lg: "45px" }, boxSizing: "border-box" }}
