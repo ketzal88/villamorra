@@ -113,7 +113,10 @@ const Footer = () => {
             <Typography
               paragraph
               className={classes.text}
-              sx={{ marginTop: "24px !important" }}
+              sx={{
+                marginTop: "24px !important",
+                display: { xs: "none", md: "flex" },
+              }}
             >
               Aviso Legal | Politica de Privacida
               <br />

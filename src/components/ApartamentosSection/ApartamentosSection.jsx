@@ -34,7 +34,7 @@ const ApartamentosSection = () => {
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 1,
     });
     if (videoRef.current) observer.observe(videoRef.current);
     return () => {
