@@ -41,7 +41,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       marginTop: "92px",
       order: "1",
       columnGap: "26px",
-      paddingRight: "91px",
+      // paddingRight: "91px",
       marginLeft: "-50px",
     },
     [theme.breakpoints.up("lg")]: {
