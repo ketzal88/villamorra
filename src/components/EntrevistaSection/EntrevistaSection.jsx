@@ -1,7 +1,6 @@
 import { Box, Stack, Typography, Grid, useMediaQuery } from "@mui/material";
 import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import cristian from "../../assets/images/Cristian Erosa.png";
 import vendedora from "../../assets/images/vendedora.jpg";
 import phoneImage from "../../assets/images/chicaEntrevista.png";
 import FormEntrevista from "./FormEntrevista";
@@ -11,11 +10,6 @@ const images = [
     img: vendedora,
     sellerName: "Caterine Stenger",
     phoneNumber: "+595 99 2249501",
-  },
-  {
-    img: cristian,
-    sellerName: "Cristian Erosa",
-    phoneNumber: "+598 97 446 111",
   },
 ];
 
