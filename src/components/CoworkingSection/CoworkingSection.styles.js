@@ -69,6 +69,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       paddingInline: "382px !important",
+      marginTop: "10px !important"
     },
     [theme.breakpoints.up("xl")]: {
       "-webkit-line-clamp": "3 !important",
