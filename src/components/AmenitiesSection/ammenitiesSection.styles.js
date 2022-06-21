@@ -189,7 +189,8 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("xl")]: {
         maxWidth: "1240px",
-        height: "1080px",
+        height: "10px",
+        backgroundColor: "red"
       },
     },
   };
