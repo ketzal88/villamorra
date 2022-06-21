@@ -117,6 +117,10 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         padding: "23px 64px",
         marginRight: "20px",
       },
+      [theme.breakpoints.down("sm")]: {
+        height: "64px",
+        padding: "14px",
+      },
     },
     recorridoButton: {
       width: "100%",
@@ -147,6 +151,10 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         fontSize: "22px",
         fontWeight: "bold",
         padding: "23px 64px",
+      },
+      [theme.breakpoints.down("sm")]: {
+        height: "64px",
+        padding: "14px",
       },
     },
   };

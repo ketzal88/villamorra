@@ -244,6 +244,13 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       margin: 0,
     },
+    [theme.breakpoints.down("sm")]: {
+      height: "64px",
+      "& > p": {
+        padding: "20px 17px !important",
+        display: "flex",
+      }
+    },
   },
   imgSellerBox: {
     width: "345px",
@@ -356,6 +363,10 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       fontSize: "22px",
       marginTop: "62px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "64px",
+      padding: "14px",
     },
   },
   carrotButton: {
