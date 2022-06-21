@@ -120,5 +120,9 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       fontSize: "22px !important",
       padding: "26px 95px",
     },
+    [theme.breakpoints.down("sm")]: {
+      height: "64px",
+      padding: "14px 90px",
+    },
   },
 }));
