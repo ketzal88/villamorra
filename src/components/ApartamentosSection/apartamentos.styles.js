@@ -42,7 +42,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   imgContainer: {
-    objectFit: "cover",
+    objectFit: "fit",
     width: "100%",
     height: "527px",
     color: "white",

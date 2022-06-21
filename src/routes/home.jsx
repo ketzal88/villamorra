@@ -1,4 +1,4 @@
-import "../App.scss";
+import "../App.css";
 import LandingSection from "../components/LandingSection/LandingSection";
 import AmenitiesSection from "../components/AmenitiesSection/AmenitiesSection";
 import ApartamentosSection from "../components/ApartamentosSection/ApartamentosSection";
