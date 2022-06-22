@@ -153,7 +153,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   sellerImgContainer: {
     position: "relative",
     marginBottom: "-1px",
-    marginTop: "150px",
+    marginTop: "70px",
     [theme.breakpoints.up("sm")]: {
       marginTop: "200px",
     },

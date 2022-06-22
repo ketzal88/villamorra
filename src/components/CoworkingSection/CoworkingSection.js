@@ -1,8 +1,6 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import cowork from "../../assets/images/Desktop/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
 import { Link } from "react-router-dom";
