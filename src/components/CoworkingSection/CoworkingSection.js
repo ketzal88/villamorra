@@ -5,11 +5,11 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import cowork from "../../assets/images/Desktop/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
-import { useMediaQuery } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
-  const laptop = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const navigate = useNavigate();
   return (
     <Stack direction="column" alignItems="center">
       <Stack
@@ -39,15 +39,12 @@ const CoworkingSection = () => {
         alignItems="center"
         className={classes.recorridoVirtualWrapper}
       >
-        {/* <iframe
-            title="Recorrido Virtual Vitrium"
-            src="https://www.xline3d.com/360/VillaMorraV_00/"
-            width="100%"
-            height="100%"
-          /> */}
-
         <Grid container justifyContent="center">
-          <Button variant="contained" class={classes.recorridoButton}>
+          <Button
+            variant="contained"
+            class={classes.recorridoButton}
+            onClick={() => navigate("/recorrido-virtual")}
+          >
             Recorrido Virtual
           </Button>
         </Grid>

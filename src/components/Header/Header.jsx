@@ -14,7 +14,7 @@ import MenuIconClose from "@mui/icons-material/Close";
 import { useScrollTo } from "../../customHooks/useScrollTo";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
-const Header = ({ path }) => {
+const Header = () => {
   const [drawerStatus, setDrawerStatus] = useState(false);
   const { pathname } = useLocation();
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
