@@ -5,11 +5,10 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import cowork from "../../assets/images/Desktop/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
-  const navigate = useNavigate();
   return (
     <Stack direction="column" alignItems="center">
       <Stack
@@ -39,15 +38,14 @@ const CoworkingSection = () => {
         alignItems="center"
         className={classes.recorridoVirtualWrapper}
       >
-        <Grid container justifyContent="center">
-          <Button
-            variant="contained"
-            class={classes.recorridoButton}
-            onClick={() => navigate("/recorrido-virtual")}
-          >
-            Recorrido Virtual
-          </Button>
-        </Grid>
+        <Link
+          to="/recorrido-virtual"
+          target="_blank"
+          className={classes.recorridoButton}
+          sx={{ textAlign: "center" }}
+        >
+          Recorrido Virtual
+        </Link>
       </Stack>
     </Stack>
   );

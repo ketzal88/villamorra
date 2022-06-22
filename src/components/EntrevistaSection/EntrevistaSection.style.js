@@ -253,12 +253,14 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   imgSellerBox: {
-    width: "330px",
-    height: "300px",
+    width: "235px",
+    height: "235px",
     marginInline: "auto",
     borderRadius: "50%",
     marginBottom: "62px !important",
     overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
       display: "inline-block",
       // width: "231px",
@@ -267,6 +269,9 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       borderRadius: 0,
       marginLeft: 0,
       marginTop: "0px",
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: "80px",
     },
     [theme.breakpoints.up("lg")]: {
       height: "676px",
@@ -277,14 +282,9 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       height: "550px",
       width: "457px",
     },
-    [theme.breakpoints.down("md")]: {
-      height: " 370px !important",
-    },
   },
   imgSeller: {
     objectFit: "contain",
-    display: "block",
-    margin: "auto",
     height: "100%",
     width: "100%",
     [theme.breakpoints.up("xs")]: {
