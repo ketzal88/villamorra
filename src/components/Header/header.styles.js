@@ -68,7 +68,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       width: "70px",
       position: "absolute",
       left: "50%",
-      top: "6px",
+      top: "2px",
       transform: "translateX(-50%)",
       [theme.breakpoints.up("sm")]: {
         position: "relative",
@@ -85,7 +85,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
     },
     linksContainer: {
-      marginTop: "0px",
+      marginTop: "6px", //
       [theme.breakpoints.down("md")]: {
         display: "none",
       },
@@ -116,7 +116,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("lg")]: {
         display: "flex",
-        paddingTop: "2px",
+        paddingTop: "7px",
       },
     },
     customerService: {
