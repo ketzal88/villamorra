@@ -249,12 +249,12 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       "& > p": {
         padding: "20px 17px !important",
         display: "flex",
-      }
+      },
     },
   },
   imgSellerBox: {
-    width: "345px",
-    height: "345px",
+    width: "330px",
+    height: "300px",
     marginInline: "auto",
     borderRadius: "50%",
     marginBottom: "62px !important",
@@ -274,7 +274,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       marginTop: "0px",
     },
     [theme.breakpoints.up("xl")]: {
-      height: "676px",
+      height: "550px",
       width: "457px",
     },
     [theme.breakpoints.down("md")]: {
@@ -291,27 +291,19 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       transform: "translateY(20%) translateX(-5%) scale(1.4)",
     },
     [theme.breakpoints.up("sm")]: {
-      marginBottom: "100px",
+      marginBottom: "230px",
       transform: "translateY(0%) translateX(-6%) scale(1.4)",
       display: "inline-block",
-      // width: "231px",
       maxHeight: "100%",
       borderRadius: 0,
       marginLeft: 0,
-      marginTop: "0px",
     },
     [theme.breakpoints.up("lg")]: {
-      height: "676px",
-
-      // width: "457px",
-      marginTop: "0px",
+      marginTop: "73px",
       transform: "translateX(-16%) translateY(5%)",
     },
     [theme.breakpoints.up("xl")]: {
-      height: "676px",
-
-      // width: "457px",
-      transform: "translateX(-7%) translateY(10%)",
+      transform: "translateX(-13%) translateY(10%)",
     },
     // [theme.breakpoints.down("md")]: {
     //   height: " 370px !important",
