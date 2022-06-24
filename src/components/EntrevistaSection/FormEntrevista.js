@@ -57,25 +57,24 @@ const countryOptions = [
   },
 ];
 
+const defaultData = {
+  oid: "00Dj0000001rNSE",
+  lead_source: "Espontaneo",
+  "00Nj000000A29r1": "Departamentos",
+  "00Nj000000ApuCe": "Landing",
+  "00Nj000000Bohtn": "Formulario",
+  "00Nj0000008bHZU": "PY - 01 Sync",
+  // first_name: "Test",
+  // last_name: "Test",
+  // email: "test@gmail.com",
+  // phone: "3816261374",
+  // "00Nj0000008ze1B": "AR",
+};
+
 const FormEntrevista = () => {
   const classes = usePrensaSectionStyles();
   const [countryCode, setCountryCode] = useState("");
-  const [data, setData] = useState({
-    oid: "00Dj0000001rNSE",
-    retURL: "https://vitriumcapital.com/01delcentro/montevideo/gracias.html",
-    lead_source: "Espontaneo",
-    "00Nj000000A29r1": "Departamentos",
-    "00Nj000000ABZ0p":
-      "https://vitriumcapital.com/01delcentro/montevideo/el-momento-de-invertir.php",
-    "00Nj000000ApuCe": "Landing",
-    "00Nj000000Bohtn": "Formulario",
-    "00Nj0000008bHZU": "UY - 01 del Centro",
-    // first_name: "Test",
-    // last_name: "Test",
-    // email: "test@gmail.com",
-    // phone: "3816261374",
-    // "00Nj0000008ze1B": "AR",
-  });
+  const [data, setData] = useState(defaultData);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
