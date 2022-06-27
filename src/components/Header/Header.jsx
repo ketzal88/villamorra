@@ -12,7 +12,6 @@ import logoVM from "../../assets/images/logoVM.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuIconClose from "@mui/icons-material/Close";
 import { useScrollTo } from "../../customHooks/useScrollTo";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const Header = () => {
   const [drawerStatus, setDrawerStatus] = useState(false);
@@ -104,23 +103,6 @@ const Header = () => {
         <Link to="/">
           <img src={logoVM} alt="Logo Sync" className={classes.logo} />
         </Link>
-
-        <IconButton
-          aria-label="customer service"
-          sx={(theme) => ({
-            position: "absolute",
-            right: "38px",
-            backgroundColor: "white",
-            height: "48px",
-            width: "48px",
-            [theme.breakpoints.up("sm")]: {
-              display: "none",
-            },
-          })}
-        >
-          <SupportAgentIcon />
-        </IconButton>
-
         <Box className={classes.linksContainer}>
           {<Links classes={classes} setReference={setReference} />}
         </Box>
