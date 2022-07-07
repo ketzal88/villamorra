@@ -28,68 +28,65 @@ import {
 
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
-  const FadeUp = batch(Fade());
+  const FadeUp = batch(Fade(), Sticky());
   return (
-    <div style={{ backgroundColor: "red", position: "relative" }}>
-      <ScrollContainer>
-        <ScrollPage>
-          <Animator animation={Fade()}>
-            <Stack
-              direction="column"
-              justifyContent={{ md: "center" }}
-              className={classes.wrapperSection}
-            >
-              <img
-                className={classes.imgSection}
-                src={cowork}
-                alt="Coworking Incluido"
-                style={{
-                  height: "100vh",
-                }}
-              />
-              <Box className={classes.textWrapper}>
-                <Typography className={classes.titleSection} variant="h2">
-                  Co-Working
-                </Typography>
-                <Typography className={classes.textSection}>
-                  Cómodo y amplio espacio ubicado en la azotea. Oficinas
-                  privadas y mesas compartidas que ofrecen un ambiente de
-                  trabajo informal.
-                </Typography>
-              </Box>
-            </Stack>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={Fade()}>
-            <Stack
-              direction="column"
-              justifyContent={{ md: "center" }}
-              className={classes.wrapperSection}
-            >
-              <img
-                className={classes.imgSection}
-                src={coliving}
-                alt="Coworking Incluido"
-                style={{
-                  height: "100vh",
-                }}
-              />
-              <Box className={classes.textWrapper}>
-                <Typography className={classes.titleSection} variant="h2">
-                  Co-Living
-                </Typography>
-                <Typography className={classes.textSection}>
-                  Cómodo y amplio espacio ubicado en la azotea. Oficinas
-                  privadas y mesas compartidas que ofrecen un ambiente de
-                  trabajo informal.
-                </Typography>
-              </Box>
-            </Stack>
-          </Animator>
-        </ScrollPage>
-        <Stack direction="column" alignItems="center">
-          {/* <Stack
+    <>
+      <ScrollPage>
+        <Animator animation={FadeUp}>
+          <Stack
+            direction="column"
+            justifyContent={{ md: "center" }}
+            className={classes.wrapperSection}
+          >
+            <img
+              className={classes.imgSection}
+              src={cowork}
+              alt="Coworking Incluido"
+              style={{
+                height: "100vh",
+              }}
+            />
+            <Box className={classes.textWrapper}>
+              <Typography className={classes.titleSection} variant="h2">
+                Co-Working
+              </Typography>
+              <Typography className={classes.textSection}>
+                Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas
+                y mesas compartidas que ofrecen un ambiente de trabajo informal.
+              </Typography>
+            </Box>
+          </Stack>
+        </Animator>
+      </ScrollPage>
+      <ScrollPage>
+        <Animator animation={FadeUp}>
+          <Stack
+            direction="column"
+            justifyContent={{ md: "center" }}
+            className={classes.wrapperSection}
+          >
+            <img
+              className={classes.imgSection}
+              src={coliving}
+              alt="Coworking Incluido"
+              style={{
+                height: "100vh",
+              }}
+            />
+            <Box className={classes.textWrapper}>
+              <Typography className={classes.titleSection} variant="h2">
+                Co-Living
+              </Typography>
+              <Typography className={classes.textSection}>
+                Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas
+                y mesas compartidas que ofrecen un ambiente de trabajo informal.
+              </Typography>
+            </Box>
+          </Stack>
+        </Animator>
+      </ScrollPage>
+      {/* <Stack direction="column" alignItems="center"> */}
+      {/* <Stack
           direction="column"
           justifyContent={{ md: "center" }}
           className={classes.wrapperSection}
@@ -109,25 +106,24 @@ const CoworkingSection = () => {
             </Typography>
           </Box>
         </Stack> */}
-          <Stack
-            id="recorridoSection"
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            className={classes.recorridoVirtualWrapper}
+      {/* <Stack
+          id="recorridoSection"
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          className={classes.recorridoVirtualWrapper}
+        >
+          <Link
+            to="/recorrido-virtual"
+            target="_blank"
+            className={classes.recorridoButton}
+            sx={{ textAlign: "center" }}
           >
-            <Link
-              to="/recorrido-virtual"
-              target="_blank"
-              className={classes.recorridoButton}
-              sx={{ textAlign: "center" }}
-            >
-              Recorrido Virtual
-            </Link>
-          </Stack>
-        </Stack>
-      </ScrollContainer>
-    </div>
+            Recorrido Virtual
+          </Link>
+        </Stack> */}
+      {/* </Stack> */}
+    </>
   );
 };
 export default CoworkingSection;

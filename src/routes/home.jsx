@@ -9,20 +9,35 @@ import PrensaSection from "../components/PrensaSection/PrensaSection";
 import FirstCarrouselSection from "../components/FirstCarrouselSection/FirstCarrouselSection";
 import InfoProjectSection from "../components/InfoProjectSection/InfoProjectSection";
 import CoworkingSection from "../components/CoworkingSection/CoworkingSection";
+import { ScrollContainer, ScrollPage } from "react-scroll-motion";
 
 export default function Home() {
   return (
     <>
-      <LandingSection />
-      <EdificioSection />
-      <FirstCarrouselSection />
-      <InfoProjectSection />
-      <ApartamentosSection />
-      <AmenitiesSection />
-      <CoworkingSection />
-      <PrensaSection />
-      <UbicacionSection />
-      <EntrevistaSection />
+      <ScrollContainer>
+        <ScrollPage>
+          <LandingSection />
+        </ScrollPage>
+        <ScrollPage>
+          <EdificioSection />
+        </ScrollPage>
+        <ScrollPage>
+          <FirstCarrouselSection />
+        </ScrollPage>
+        <ScrollPage>
+          <InfoProjectSection />
+        </ScrollPage>
+        <ScrollPage>
+          <ApartamentosSection />
+        </ScrollPage>
+        <ScrollPage>
+          <AmenitiesSection />
+        </ScrollPage>
+        <CoworkingSection />
+        <PrensaSection />
+        <UbicacionSection />
+        <EntrevistaSection />
+      </ScrollContainer>
     </>
   );
 }
