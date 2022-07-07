@@ -7,10 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApartmentsCatalogue from "./routes/apartmentsCatalogue";
 import Apartment from "./routes/apartment";
 import RecorridoVirtual from "./routes/RecorridoVirtual";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      {/* <ParallaxProvider> */}
       <BrowserRouter>
         <Header />
         <Routes>
@@ -30,6 +32,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      {/* </ParallaxProvider> */}
     </ThemeProvider>
   );
 }
